@@ -2,8 +2,9 @@
 
 __CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
 __OPT_ROOT="${__OPT_ROOT:-${HOME}/.local}"
+NAME="${NAME:-system}"
 
-PREFIX="${__OPT_ROOT}/system"
+PREFIX="${__OPT_ROOT}/${NAME}"
 
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
@@ -16,7 +17,7 @@ install() {
         Linux-ppc64le) CONDA_UNAME=linux-ppc64le ;;
         *) exit 1 ;;
     esac
-    file="conda/system_${CONDA_UNAME}.yml"
+    file="conda/${NAME}_${CONDA_UNAME}.yml"
 
     if [[ -d ${PREFIX} ]]; then
         mamba env create -f "${file}" -p "${PREFIX}"
@@ -37,7 +38,7 @@ case "$1" in
         uninstall
         ;;
     *)
-        echo "Usage: __CONDA_PREFIX=... __OPT_ROOT=... $0 [install|uninstall]"
+        echo "Usage: __CONDA_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"
         exit 1
         ;;
 esac
