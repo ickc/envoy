@@ -24,7 +24,6 @@ dependencies:
 - compilers
 - contextily
 - coverage
-- cuda-python
 - custom-inherit
 - cvxopt
 - dautilpy
