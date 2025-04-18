@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 ZIM_HOME="${ZIM_HOME:-${HOME}/.zim}"
 
 install() {

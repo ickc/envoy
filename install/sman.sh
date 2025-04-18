@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 __OPT_ROOT="${__OPT_ROOT:-${HOME}/.local}"
 
 VERSION=1.0.4
