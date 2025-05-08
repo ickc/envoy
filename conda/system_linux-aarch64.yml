@@ -23,6 +23,7 @@ dependencies:
 - imagemagick
 - joshuto
 - jq
+- juliaup
 - lsdeluxe
 - make
 - mosh
@@ -44,5 +45,4 @@ dependencies:
 - zellij
 - zsh
 - zstd
-- juliaup
 name: system
