@@ -22,9 +22,9 @@ install() {
     file="conda/${NAME}_${CONDA_UNAME}.yml"
 
     if [[ -d ${PREFIX} ]]; then
-        mamba env create -f "${file}" -p "${PREFIX}"
-    else
         mamba env update -f "${file}" -p "${PREFIX}" --prune
+    else
+        mamba env create -f "${file}" -p "${PREFIX}"
     fi
 }
 
