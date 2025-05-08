@@ -23,6 +23,7 @@ hub,,True,,2.14.2,,,git + hub = github,,False,True,True,True,True,True,True,True
 imagemagick,,False,,7.1.0_44,,,"Software suite to create, edit, compose, or convert bitmap images.",,False,True,True,True,True,True,False,False,False
 joshuto,,False,,0.9.8,,,ranger-like terminal file manager written in Rust,,False,True,True,True,True,True,False,False,False
 jq,,False,,1.7.1,,,A command-line JSON processor.,,False,True,True,True,True,True,False,False,False
+juliaup,,False,,1.17.20,,,Julia installer and version multiplexer,,False,True,True,False,True,True,False,True,False
 libiconv,,True,,1.18,,,Provides iconv for systems which don't have one (or that cannot convert from/to Unicode.),,False,True,True,True,True,True,True,True,False
 lsdeluxe,,False,,1.1.5,,,The next gen ls command,,False,True,True,True,True,True,False,True,False
 lynx,,True,,2.9.2,,,Text-based web browser,http://lynx.invisible-island.net/lynx_help/,False,True,False,False,True,False,False,False,False
