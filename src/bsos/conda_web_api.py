@@ -155,7 +155,7 @@ class CondaPackage:
     @cached_property
     def depends_on_python(self) -> bool:
         for file in self.latest_files_with_latest_build_number:
-            for dep in file["attrs"]["depends"]:
+            for dep in file["attrs"].get("depends", []):
                 if dep.startswith("python"):
                     return True
         return False
@@ -168,7 +168,7 @@ class CondaPackage:
             # matching platform
             if platform == platform_cur:
                 depends_on_python = False
-                for dep in file["attrs"]["depends"]:
+                for dep in file["attrs"].get("depends", []):
                     if dep.startswith("python "):
                         depends_on_python = True
                         break
