@@ -46,4 +46,5 @@ dependencies:
 - zellij
 - zsh
 - zstd
+- juliaup
 name: system
