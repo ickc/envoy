@@ -3,6 +3,7 @@ acor,,True,,1.1.1,,,Estimate the autocorrelation time of a time series quickly.,
 adbc-driver-postgresql,,False,,1.6.0,pandas,,Database access libraries for Apache Arrow,https://arrow.apache.org/docs/,True,False,False,False,False,True,False,False,False,False,False
 adbc-driver-sqlite,,False,,1.6.0,pandas,,Database access libraries for Apache Arrow,https://arrow.apache.org/docs/,True,False,False,False,False,True,False,False,False,False,False
 aiohttp,,True,,3.11.18,,,Async http client/server framework (asyncio),http://aiohttp.readthedocs.io/,True,True,True,False,True,True,True,True,True,True,False
+anywidget,,False,,0.9.18,,,"simple, custom Jupyter widgets",,True,False,False,False,False,True,False,False,False,False,False
 archspec,,False,,0.2.5,,,A library to query system architecture,https://archspec.readthedocs.io/,True,False,False,False,False,True,False,False,False,False,False
 arrow,,True,,1.3.0,,,Better dates & times for Python,https://arrow.readthedocs.io,True,True,False,False,False,True,True,False,True,True,False
 asdf-astropy,,False,,0.7.1,astropy,,ASDF serialization support for astropy,,True,False,False,False,False,True,False,False,False,False,False
