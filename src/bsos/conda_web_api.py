@@ -202,6 +202,9 @@ class CondaPackages:
     df: pd.DataFrame
     default_channel: str = "conda-forge"
 
+    def __post_init__(self) -> None:
+        self.df.sort_index(inplace=True)
+
     @classmethod
     def read_csv(
         cls,
@@ -254,24 +257,26 @@ class CondaPackages:
     @cached_property
     def platforms(self) -> pd.DataFrame:
         """Get all platforms from the packages."""
-        return (
+        platforms = (
             pd.get_dummies(pd.Series((package.platforms.keys() for package in self.packages)).explode())
             .groupby(level=0)
             .max()
         )
+        platforms.index = self.df.index
+        return platforms
 
     def expand_from_data(self) -> None:
-        # drop index for concat
-        df = self.df.reset_index(drop=True)
+        df = self.df
         platforms = self.platforms
         df = pd.concat([df, platforms], axis=1)
 
-        df["summary"] = [p.summary for p in self.packages]
-        df["latest_version"] = [p.latest_version for p in self.packages]
-        df["doc_url"] = [p.doc_url for p in self.packages]
-        df["depends_on_python"] = [p.depends_on_python for p in self.packages]
-        # add back the index
-        df.index = pd.Index([p.name for p in self.packages], name="name")
+        for col in [
+            "latest_version",
+            "summary",
+            "doc_url",
+            "depends_on_python",
+        ]:
+            df[col] = [getattr(p, col) for p in self.packages]
 
         columns = [
             "channel",
@@ -285,7 +290,6 @@ class CondaPackages:
             "depends_on_python",
         ] + sorted(platforms.columns.tolist())
         df = df[columns]
-        df.sort_index(inplace=True)
         self.df = df
 
     def to_csv(self, path: Path) -> None:
