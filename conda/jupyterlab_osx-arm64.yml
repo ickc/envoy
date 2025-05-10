@@ -1,0 +1,16 @@
+channels:
+- conda-forge
+dependencies:
+- python=3.13
+- anywidget
+- bash_kernel
+- ipympl
+- ipywidgets
+- jupyter_bokeh
+- jupyterlab
+- jupyterlab-geojson
+- jupyterlab-myst
+- jupytext
+- plotly
+- pyviz_comms
+name: jupyterlab

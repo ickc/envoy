@@ -4,6 +4,7 @@ dependencies:
 - python=3.11
 - adbc-driver-postgresql
 - adbc-driver-sqlite
+- anywidget
 - archspec
 - asdf-astropy
 - astropy
