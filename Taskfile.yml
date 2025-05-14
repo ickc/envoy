@@ -11,6 +11,11 @@ tasks:
     desc: "Remove the bsos cache when using conda_web_api."
     cmds:
       - pixi run python -m bsos.conda_web_api clean
+  update:
+    desc: "Update conda environment files by cleaning the cache and regenerating them."
+    deps:
+      - clean
+      - generate
   list:depended:
     desc: "List all depended packages."
     cmds:
