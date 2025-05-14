@@ -1,4 +1,5 @@
 name,channel,ignored,version,latest_version,depended,notes,summary,doc_url,depends_on_python,linux-64,linux-aarch64,linux-ppc64le,noarch,osx-64,osx-arm64,win-32,win-64,win-arm64
+bash,,False,,5.2.21,,,Bourne Again Shell,https://www.gnu.org/software/bash/manual/,False,True,True,True,False,True,True,False,False,False
 bat,,False,,0.25.0,,,A cat(1) clone with syntax highlighting and Git integration,,False,True,True,True,False,True,True,False,True,False
 bat-extras,,False,,2024.08.24,,,Bash scripts that integrate bat with various command line tools,,False,False,False,False,True,False,False,False,False,False
 bottom,,False,,0.10.2,,,Yet another cross-platform graphical process/system monitor,,False,True,True,True,False,True,True,False,True,False
@@ -40,6 +41,7 @@ pandoc,,False,,3.6.4,,,The universal markup converter,http://pandoc.org/MANUAL.h
 parallel,,False,,20250422,,,GNU parallel is a shell tool for executing jobs in parallel using one or more computers.,,False,True,True,True,False,True,True,False,True,False
 pixi,,False,,0.46.0,,,"pixi is a cross-platform, multi-language package manager and workflow tool build on the shoulders of the conda ecosystem.",,False,True,True,True,False,True,True,False,True,False
 poppler,,False,,25.02.0,,,The Poppler PDF manipulation library.,,False,True,True,True,False,True,True,False,True,False
+ripgrep,,False,,14.1.1,,,ripgrep recursively searches directories for a regex pattern,,False,True,True,True,False,True,True,False,True,False
 sed,,False,,4.9,,,sed (stream editor) is a non-interactive command-line text editor.,,False,True,True,True,False,True,True,False,False,False
 shellcheck,,False,,0.10.0,,,"ShellCheck, a static analysis tool for shell scripts",,False,True,True,False,False,True,True,False,True,False
 starship,,False,,1.23.0,,,"The minimal, blazing-fast, and infinitely customizable prompt for any shell!",,False,True,True,True,False,True,True,False,True,False
