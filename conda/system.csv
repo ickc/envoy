@@ -10,7 +10,6 @@ difftastic,,False,,0.63.0,,,Diff that understands syntax,,False,True,True,True,F
 dua-cli,,False,,2.30.0,,,"View disk space usage and delete unwanted data, fast",,False,True,True,True,False,True,True,False,True,False
 dust,,False,,1.2.0,,,du + rust = dust. Like du but more intuitive.,,False,True,True,True,False,True,True,False,True,False
 exiftool,,False,,12.76,,,"Read, Write and Edit Meta Information!",,False,True,True,True,False,True,True,False,True,False
-eza,,True,,0.21.3,,,"A modern, maintained replacement for ls.",,False,True,True,True,False,True,True,False,True,False
 fastfetch,,False,,2.42.0,,,"Like neofetch, but much faster because written mostly in C",,False,True,True,True,False,True,True,False,False,False
 ffmpeg,,False,,7.1.1,,,"Cross-platform solution to record, convert and stream audio and video.",https://ffmpeg.org/documentation.html,False,True,True,True,False,True,True,True,True,False
 fzf,,False,,0.62.0,,,A command-line fuzzy finder,,False,True,True,True,False,True,True,False,True,False
@@ -21,22 +20,17 @@ go-shfmt,,False,,3.11.0,,,"A shell parser, formatter, and interpreter. Supports 
 go-task,,False,,3.43.3,,,A task runner / simpler Make alternative written in Go.,https://taskfile.dev/,False,True,True,True,False,True,True,False,True,False
 graphviz,,False,,12.2.1,,,Open Source graph visualization software.,https://graphviz.gitlab.io/documentation/,False,True,True,True,False,True,True,True,True,False
 htop,,False,,3.4.0,,,htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top',,False,True,True,True,False,True,True,False,False,False
-hub,,True,,2.14.2,,,git + hub = github,,False,True,True,True,False,True,True,True,True,False
 imagemagick,,False,,7.1.0_44,,,"Software suite to create, edit, compose, or convert bitmap images.",,False,True,True,True,False,True,True,False,False,False
 joshuto,,False,,0.9.8,,,ranger-like terminal file manager written in Rust,,False,True,True,True,False,True,True,False,False,False
 jq,,False,,1.7.1,,,A command-line JSON processor.,,False,True,True,True,False,True,True,False,False,False
 juliaup,,False,,1.17.20,,,Julia installer and version multiplexer,,False,True,True,False,False,True,True,False,True,False
-libiconv,,True,,1.18,,,Provides iconv for systems which don't have one (or that cannot convert from/to Unicode.),,False,True,True,True,False,True,True,True,True,False
 lsdeluxe,,False,,1.1.5,,,The next gen ls command,,False,True,True,True,False,True,True,False,True,False
-lynx,,True,,2.9.2,,,Text-based web browser,http://lynx.invisible-island.net/lynx_help/,False,True,False,False,False,True,False,False,False,False
 make,,False,,4.4.1,,,GNU Make is a tool which controls the generation of executables and other non-source files of a program from the program's source files.,https://www.gnu.org/software/make/manual/,False,True,True,True,False,True,True,True,True,False
 mediainfo,,False,,24.12,,,Convenient unified display of the most relevant technical and tag data for video and audio files,https://mediaarea.net/MediaInfo,False,True,False,False,False,True,False,False,False,False
 mosh,,False,,1.4.0,,,Mobile shell that supports roaming and intelligent local echo,,False,True,True,True,False,True,True,False,False,False
 nano,,False,,8.3,,,"Nano's ANOther editor, an enhanced free Pico clone",https://www.nano-editor.org/docs.php,False,True,True,True,False,True,True,False,False,False
-ncdu,,True,,1.16,,,NCurses Disk Usage,https://dev.yorhel.nl/ncdu/man,False,True,True,True,False,True,True,False,False,False
 nvtop,,False,,3.2.0,,,Neat Videocard TOP,,False,True,True,True,False,True,True,False,False,False
 openssh,,False,,8.0p1,,,A suite of secure networking utilities based on the SSH protocol,,False,True,True,True,False,True,True,False,False,False
-p7zip,,True,,16.02,,,"p7zip is a quick port of 7z.exe and 7za.exe (command line version of 7zip, see www.7-zip.org ) for Unix.",,False,True,True,True,False,True,True,False,False,False
 pandoc,,False,,3.6.4,,,The universal markup converter,http://pandoc.org/MANUAL.html,False,True,True,False,False,True,True,True,True,False
 parallel,,False,,20250422,,,GNU parallel is a shell tool for executing jobs in parallel using one or more computers.,,False,True,True,True,False,True,True,False,True,False
 pixi,,False,,0.46.0,,,"pixi is a cross-platform, multi-language package manager and workflow tool build on the shoulders of the conda ecosystem.",,False,True,True,True,False,True,True,False,True,False
@@ -46,7 +40,6 @@ sed,,False,,4.9,,,sed (stream editor) is a non-interactive command-line text edi
 shellcheck,,False,,0.10.0,,,"ShellCheck, a static analysis tool for shell scripts",,False,True,True,False,False,True,True,False,True,False
 starship,,False,,1.23.0,,,"The minimal, blazing-fast, and infinitely customizable prompt for any shell!",,False,True,True,True,False,True,True,False,True,False
 tar,,False,,1.34,,,GNU tape archive program,,False,True,True,True,False,True,True,False,False,False
-tidy-html5,,True,,5.9.14,,,"The granddaddy of HTML tools, with support for modern standards.",http://www.html-tidy.org/,False,True,True,True,False,True,True,False,True,False
 tmux,,False,,3.5,,,A terminal multiplexer.,,False,True,True,True,False,True,True,False,False,False
 tree,,False,,2.2.1,,,Tree is a recursive directory listing command,http://oldmanprogrammer.net/source.php?dir=projects/tree,False,True,True,True,False,True,True,False,False,False
 unzip,,False,,6.0,,,,,False,True,True,True,False,True,True,False,False,False
