@@ -1,22 +1,21 @@
 #!/bin/bash
 
 # Check if filename argument is provided
-if [[ $# -ne 2 ]]; then
-    echo 'Usage: compile.sh INFILE OUTFILE' >&2
+if [[ $# -ne 1 ]]; then
+    echo 'Usage: compile.sh FILENAME' >&2
     exit 1
 fi
 
-INFILE="$1"
-OUTFILE="$2"
+FILENAME="$1"
 
 # Check if the file exists
-if [[ ! -f ${INFILE} ]]; then
-    echo "Error: File '${INFILE}' not found" >&2
+if [[ ! -f ${FILENAME} ]]; then
+    echo "Error: File '${FILENAME}' not found" >&2
     exit 1
 fi
 
 # Get the directory of the input file for relative path resolution
-BASEDIR="$(dirname "${INFILE}")"
+BASEDIR="$(dirname "${FILENAME}")"
 
 # Process the file line by line
 while IFS= read -r line; do
@@ -39,4 +38,4 @@ while IFS= read -r line; do
         # Print the line as-is
         echo "${line}"
     fi
-done < "${INFILE}" > "${OUTFILE}"
+done < "${FILENAME}"
