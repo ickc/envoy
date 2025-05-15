@@ -7,17 +7,8 @@ DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-# helpers ##############################################################
-
-print_double_line() {
-    eval printf %.0s= '{1..'"${COLUMNS:-80}"\}
-}
-
-print_line() {
-    eval printf %.0s- '{1..'"${COLUMNS:-80}"\}
-}
-
-########################################################################
+# shellcheck source=util/helpers.sh
+source util/helpers.sh
 
 mamba_install() {
     case "${__OSTYPE}-${__ARCH}" in
