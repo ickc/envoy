@@ -7,10 +7,10 @@ source ../lib/zim.sh
 
 case "$1" in
     install)
-        install
+        zim_install
         ;;
     uninstall)
-        uninstall
+        zim_uninstall
         ;;
     *)
         echo "Usage: ZIM_HOME=... $0 [install|uninstall]"

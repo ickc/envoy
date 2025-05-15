@@ -7,10 +7,10 @@ source ../lib/code.sh
 
 case "$1" in
     install)
-        install
+        code_install
         ;;
     uninstall)
-        uninstall
+        code_uninstall
         ;;
     *)
         echo "Usage: __OPT_ROOT=... $0 [install|uninstall]"

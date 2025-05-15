@@ -7,10 +7,10 @@ source ../lib/sman.sh
 
 case "$1" in
     install)
-        install
+        sman_install
         ;;
     uninstall)
-        uninstall
+        sman_uninstall
         ;;
     *)
         echo "Usage: __OPT_ROOT=... $0 [install|uninstall]"

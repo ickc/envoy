@@ -7,7 +7,7 @@ BINDIR="${__OPT_ROOT}/bin"
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-install() {
+sman_install() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) GO_UNAME=darwin-arm64 ;;
         Darwin-x86_64) GO_UNAME=darwin-amd64 ;;
@@ -31,6 +31,6 @@ install() {
     mv "${filename}" "${BINDIR}/sman"
 }
 
-uninstall() {
+sman_uninstall() {
     rm -f "${BINDIR}/sman"
 }

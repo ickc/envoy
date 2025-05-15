@@ -7,10 +7,10 @@ source ../lib/mamba-env.sh
 
 case "$1" in
     install)
-        install
+        mamba_env_install
         ;;
     uninstall)
-        uninstall
+        mamba_env_uninstall
         ;;
     *)
         echo "Usage: MAMBA_ROOT_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"

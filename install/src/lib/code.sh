@@ -5,7 +5,7 @@ BINDIR="${__OPT_ROOT}/bin"
 
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-install() {
+code_install() {
     case "${__OSTYPE}-${__ARCH}" in
         "Linux-x86_64")
             url="https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64"
@@ -54,6 +54,6 @@ install() {
     mv code "${BINDIR}"
 }
 
-uninstall() {
+code_uninstall() {
     rm -rf "${BINDIR}/code"
 }

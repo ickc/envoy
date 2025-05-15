@@ -19,7 +19,7 @@ print_line() {
 
 ########################################################################
 
-install() {
+mamba_install() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) ;;
         Darwin-x86_64) ;;
@@ -51,6 +51,6 @@ install() {
     rm -rf "${DOWNLOADDIR}"
 }
 
-uninstall() {
+mamba_uninstall() {
     rm -rf "${MAMBA_ROOT_PREFIX}"
 }

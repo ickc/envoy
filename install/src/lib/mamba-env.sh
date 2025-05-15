@@ -8,7 +8,7 @@ PREFIX="${__OPT_ROOT}/${NAME}"
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-install() {
+mamba_env_install() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) CONDA_UNAME=osx-arm64 ;;
         Darwin-x86_64) CONDA_UNAME=osx-64 ;;
@@ -26,6 +26,6 @@ install() {
     fi
 }
 
-uninstall() {
+mamba_env_uninstall() {
     rm -rf "${PREFIX}"
 }

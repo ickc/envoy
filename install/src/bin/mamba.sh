@@ -7,10 +7,10 @@ source ../lib/mamba.sh
 
 case "$1" in
     install)
-        install
+        mamba_install
         ;;
     uninstall)
-        uninstall
+        mamba_uninstall
         ;;
     *)
         echo "Usage: MAMBA_ROOT_PREFIX=... $0 [install|uninstall]"
