@@ -1,4 +1,6 @@
-__CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
+# shellcheck source=../state/env.sh
+source ../state/env.sh
+
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 
