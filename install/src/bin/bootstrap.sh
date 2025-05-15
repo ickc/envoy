@@ -11,18 +11,18 @@ source ../lib/mamba-env.sh
 source ../lib/sman.sh
 source ../lib/zim.sh
 
-source_dotfiles() {
+download_dotfiles() {
     print_double_line
     echo 'Temporarily downloading dotfiles'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
     github_download_file_to ickc dotfiles master config/zsh/.zshrc ~/.zshrc
-    # shellcheck disable=SC1090
-    . ~/.zshenv || true
-    # shellcheck disable=SC1090
-    . ~/.zshrc || true
 }
 
-source_dotfiles
+download_dotfiles
+# shellcheck disable=SC1090
+. ~/.zshenv || true
+# shellcheck disable=SC1090
+. ~/.zshrc || true
 # this must be after sourcing dotfiles
 source ../state/env.sh
 
