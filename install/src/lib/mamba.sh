@@ -1,14 +1,8 @@
-# shellcheck source=../state/env.sh
-source ../state/env.sh
-
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
-
-# shellcheck source=util/helpers.sh
-source util/helpers.sh
 
 mamba_install() {
     case "${__OSTYPE}-${__ARCH}" in

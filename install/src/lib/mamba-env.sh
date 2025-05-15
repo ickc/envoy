@@ -1,6 +1,3 @@
-# shellcheck source=../state/env.sh
-source ../state/env.sh
-
 NAME="${NAME:-system}"
 
 PREFIX="${__OPT_ROOT}/${NAME}"

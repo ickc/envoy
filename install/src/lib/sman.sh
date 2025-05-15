@@ -1,6 +1,3 @@
-# shellcheck source=../state/env.sh
-source ../state/env.sh
-
 VERSION=1.0.4
 BINDIR="${__OPT_ROOT}/bin"
 
