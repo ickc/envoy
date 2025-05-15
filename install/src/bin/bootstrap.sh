@@ -18,7 +18,7 @@ main() {
     echo 'Temporarily downloading ickc/dotfiles/config/zsh/.zshenv to ~/.zshenv'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
     # shellcheck disable=SC1090
-    . ~/.zshenv
+    . ~/.zshenv || true
 
     print_double_line
     echo 'Installing VSCode CLI'
