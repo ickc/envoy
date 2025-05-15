@@ -19,7 +19,9 @@ format:  ## format all shell scripts
 			--space-redirects \
 			{} +
 check:  ## check all shell scripts
-	find . -type f -name '*.sh' \
+	find . \
+		\! -path './install/src/*' \
+		-type f -name '*.sh' \
 		-exec shellcheck \
 			--norc \
 			--enable=all \
