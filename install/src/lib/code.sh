@@ -3,6 +3,7 @@ source ../state/env.sh
 
 BINDIR="${__OPT_ROOT}/bin"
 
+# shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
 code_install() {
