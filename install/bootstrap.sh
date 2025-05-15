@@ -69,11 +69,20 @@ github_download_file_to() {
     curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
 }
 print_double_line() {
-    eval printf %.0s= '{1..'"${COLUMNS:-80}"\}
+    if [[ -n ${COLUMNS} ]]; then
+        eval printf %.0s= '{1..'"${COLUMNS}"\}
+    else
+        echo '================================================================================'
+    fi
 }
 
 print_line() {
     eval printf %.0s- '{1..'"${COLUMNS:-80}"\}
+    if [[ -n ${COLUMNS} ]]; then
+        eval printf %.0s- '{1..'"${COLUMNS}"\}
+    else
+        echo '--------------------------------------------------------------------------------'
+    fi
 }
 BSOS_SSH_COMMENT="${USER}@${HOSTNAME}"
 

@@ -5,11 +5,20 @@ set -euo pipefail
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 print_double_line() {
-    eval printf %.0s= '{1..'"${COLUMNS:-80}"\}
+    if [[ -n ${COLUMNS} ]]; then
+        eval printf %.0s= '{1..'"${COLUMNS}"\}
+    else
+        echo '================================================================================'
+    fi
 }
 
 print_line() {
     eval printf %.0s- '{1..'"${COLUMNS:-80}"\}
+    if [[ -n ${COLUMNS} ]]; then
+        eval printf %.0s- '{1..'"${COLUMNS}"\}
+    else
+        echo '--------------------------------------------------------------------------------'
+    fi
 }
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
