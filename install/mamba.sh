@@ -3,6 +3,8 @@
 set -euo pipefail
 
 __CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
+__OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
+
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 

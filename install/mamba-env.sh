@@ -3,7 +3,8 @@
 set -euo pipefail
 
 __CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
-__OPT_ROOT="${__OPT_ROOT:-${HOME}/.local}"
+__OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
+
 NAME="${NAME:-system}"
 
 PREFIX="${__OPT_ROOT}/${NAME}"
