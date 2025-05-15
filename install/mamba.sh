@@ -2,15 +2,8 @@
 
 set -euo pipefail
 
-MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
-
-# https://unix.stackexchange.com/a/84980/192799
-DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
-
-# shellcheck disable=SC2312
-read -r __OSTYPE __ARCH <<< "$(uname -sm)"
-
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 print_double_line() {
     eval printf %.0s= '{1..'"${COLUMNS:-80}"\}
 }
@@ -18,6 +11,11 @@ print_double_line() {
 print_line() {
     eval printf %.0s- '{1..'"${COLUMNS:-80}"\}
 }
+# https://unix.stackexchange.com/a/84980/192799
+DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
+
+# shellcheck disable=SC2312
+read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
 mamba_install() {
     case "${__OSTYPE}-${__ARCH}" in

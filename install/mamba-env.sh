@@ -2,9 +2,8 @@
 
 set -euo pipefail
 
-MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
-
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 NAME="${NAME:-system}"
 
 PREFIX="${__OPT_ROOT}/${NAME}"

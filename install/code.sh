@@ -2,9 +2,8 @@
 
 set -euo pipefail
 
-MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
-
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 BINDIR="${__OPT_ROOT}/bin"
 
 # shellcheck disable=SC2312
