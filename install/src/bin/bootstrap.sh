@@ -2,16 +2,15 @@
 
 set -eo pipefail
 
-# shellcheck source=../state/env.sh
 source ../state/env.sh
-# shellcheck source=../lib/mamba.sh
-source ../lib/mamba.sh
-# shellcheck source=../lib/util/git.sh
 source ../lib/util/git.sh
-# shellcheck source=../lib/util/helpers.sh
 source ../lib/util/helpers.sh
-# shellcheck source=../lib/util/ssh.sh
 source ../lib/util/ssh.sh
+source ../lib/code.sh
+source ../lib/mamba.sh
+source ../lib/mamba-env.sh
+source ../lib/sman.sh
+source ../lib/zim.sh
 
 main() {
     print_double_line
