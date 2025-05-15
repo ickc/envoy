@@ -2,8 +2,10 @@
 
 set -euo pipefail
 
+# shellcheck source=../state/env.sh
+source ../state/env.sh
 # shellcheck source=../lib/mamba.sh
-source ../lib.mamba.sh
+source ../lib/mamba.sh
 # shellcheck source=../lib/util/git.sh
 source ../lib/util/git.sh
 # shellcheck source=../lib/util/helpers.sh
