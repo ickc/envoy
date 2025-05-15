@@ -2,15 +2,6 @@
 
 set -eo pipefail
 
-source ../lib/util/git.sh
-source ../lib/util/helpers.sh
-source ../lib/util/ssh.sh
-source ../lib/code.sh
-source ../lib/mamba.sh
-source ../lib/mamba-env.sh
-source ../lib/sman.sh
-source ../lib/zim.sh
-
 download_dotfiles() {
     print_double_line
     echo 'Temporarily downloading dotfiles'
@@ -25,6 +16,14 @@ download_dotfiles
 . ~/.zshrc || true
 # this must be after sourcing dotfiles
 source ../state/env.sh
+source ../lib/util/git.sh
+source ../lib/util/helpers.sh
+source ../lib/util/ssh.sh
+source ../lib/code.sh
+source ../lib/mamba.sh
+source ../lib/mamba-env.sh
+source ../lib/sman.sh
+source ../lib/zim.sh
 
 main() {
 
