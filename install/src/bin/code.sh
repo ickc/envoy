@@ -2,9 +2,7 @@
 
 set -euo pipefail
 
-# shellcheck source=../state/env.sh
 source ../state/env.sh
-# shellcheck source=../lib/code.sh
 source ../lib/code.sh
 
 case "$1" in

@@ -9,7 +9,7 @@ LIBS = $(wildcard src/lib/*.sh)
 all: $(OUTFILES)  ## build all scripts
 
 %.sh: src/bin/%.sh $(LIBS)
-	src/compile.sh $< | sed '/^# shellcheck source=.*$$/d' > $@
+	src/compile.sh $< > $@
 	chmod +x $@
 
 print-%:

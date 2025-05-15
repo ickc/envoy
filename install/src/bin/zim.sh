@@ -2,7 +2,6 @@
 
 set -e
 
-# shellcheck source=../lib/zim.sh
 source ../lib/zim.sh
 
 case "$1" in
