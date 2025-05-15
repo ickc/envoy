@@ -12,7 +12,7 @@ case "$1" in
         uninstall
         ;;
     *)
-        echo "Usage: __CONDA_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"
+        echo "Usage: MAMBA_ROOT_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"
         exit 1
         ;;
 esac

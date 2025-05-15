@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-__CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 
 NAME="${NAME:-system}"
@@ -41,7 +41,7 @@ case "$1" in
         uninstall
         ;;
     *)
-        echo "Usage: __CONDA_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"
+        echo "Usage: MAMBA_ROOT_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"
         exit 1
         ;;
 esac

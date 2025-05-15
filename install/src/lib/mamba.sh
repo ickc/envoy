@@ -37,12 +37,12 @@ install() {
     chmod +x Miniforge3.sh
 
     print_double_line
-    if [[ -f "${__CONDA_PREFIX}/etc/profile.d/conda.sh" ]]; then
+    if [[ -f "${MAMBA_ROOT_PREFIX}/etc/profile.d/conda.sh" ]]; then
         echo Updating mamba...
-        ./Miniforge3.sh -ubsp "${__CONDA_PREFIX}"
+        ./Miniforge3.sh -ubsp "${MAMBA_ROOT_PREFIX}"
     else
         echo Installing mamba...
-        ./Miniforge3.sh -fbsp "${__CONDA_PREFIX}"
+        ./Miniforge3.sh -fbsp "${MAMBA_ROOT_PREFIX}"
     fi
 
     print_line
@@ -51,5 +51,5 @@ install() {
 }
 
 uninstall() {
-    rm -rf "${__CONDA_PREFIX}"
+    rm -rf "${MAMBA_ROOT_PREFIX}"
 }

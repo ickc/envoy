@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-__CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 
 # https://unix.stackexchange.com/a/84980/192799
@@ -41,12 +41,12 @@ install() {
     chmod +x Miniforge3.sh
 
     print_double_line
-    if [[ -f "${__CONDA_PREFIX}/etc/profile.d/conda.sh" ]]; then
+    if [[ -f "${MAMBA_ROOT_PREFIX}/etc/profile.d/conda.sh" ]]; then
         echo Updating mamba...
-        ./Miniforge3.sh -ubsp "${__CONDA_PREFIX}"
+        ./Miniforge3.sh -ubsp "${MAMBA_ROOT_PREFIX}"
     else
         echo Installing mamba...
-        ./Miniforge3.sh -fbsp "${__CONDA_PREFIX}"
+        ./Miniforge3.sh -fbsp "${MAMBA_ROOT_PREFIX}"
     fi
 
     print_line
@@ -55,7 +55,7 @@ install() {
 }
 
 uninstall() {
-    rm -rf "${__CONDA_PREFIX}"
+    rm -rf "${MAMBA_ROOT_PREFIX}"
 }
 
 case "$1" in
@@ -66,7 +66,7 @@ case "$1" in
         uninstall
         ;;
     *)
-        echo "Usage: __CONDA_PREFIX=... $0 [install|uninstall]"
+        echo "Usage: MAMBA_ROOT_PREFIX=... $0 [install|uninstall]"
         exit 1
         ;;
 esac
