@@ -2,21 +2,6 @@
 
 set -eo pipefail
 
-download_dotfiles() {
-    print_double_line
-    echo 'Temporarily downloading dotfiles'
-    github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
-    github_download_file_to ickc dotfiles master config/zsh/.zshrc ~/.zshrc
-}
-
-download_dotfiles
-# shellcheck disable=SC1090
-. ~/.zshenv || true
-# shellcheck disable=SC1090
-. ~/.zshrc || true
-# this must be after sourcing dotfiles
-__OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
-MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 # git 2.3.0 or later is required
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
@@ -40,6 +25,21 @@ github_download_file_to() {
     dest="$5"
     curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
 }
+
+download_dotfiles() {
+    echo 'Temporarily downloading dotfiles'
+    github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
+    github_download_file_to ickc dotfiles master config/zsh/.zshrc ~/.zshrc
+}
+
+download_dotfiles
+# shellcheck disable=SC1090
+. ~/.zshenv || true
+# shellcheck disable=SC1090
+. ~/.zshrc || true
+# this must be after sourcing dotfiles
+__OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 print_double_line() {
     if [[ -n ${COLUMNS} ]]; then
         eval printf %.0s= '{1..'"${COLUMNS}"\}
