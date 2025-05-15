@@ -252,10 +252,13 @@ zim_uninstall() {
 
 main() {
     print_double_line
-    echo 'Temporarily downloading ickc/dotfiles/config/zsh/.zshenv to ~/.zshenv'
+    echo 'Temporarily downloading dotfiles'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
+    github_download_file_to ickc dotfiles master config/zsh/.zshrc ~/.zshrc
     # shellcheck disable=SC1090
     . ~/.zshenv || true
+    # shellcheck disable=SC1090
+    . ~/.zshrc || true
 
     print_double_line
     echo 'Installing VSCode CLI'
@@ -294,6 +297,7 @@ main() {
     echo 'Installing dotfiles'
     # this will overwrite ~/.zshenv
     make all
+    rm -f ~/.zshrc
 
     print_double_line
     echo 'Installing to ~/.ssh'
