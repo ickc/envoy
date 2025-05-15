@@ -2,7 +2,6 @@
 
 set -eo pipefail
 
-source ../state/env.sh
 source ../lib/util/git.sh
 source ../lib/util/helpers.sh
 source ../lib/util/ssh.sh
@@ -12,7 +11,7 @@ source ../lib/mamba-env.sh
 source ../lib/sman.sh
 source ../lib/zim.sh
 
-main() {
+source_dotfiles() {
     print_double_line
     echo 'Temporarily downloading dotfiles'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
@@ -21,12 +20,19 @@ main() {
     . ~/.zshenv || true
     # shellcheck disable=SC1090
     . ~/.zshrc || true
+}
+
+source_dotfiles
+# this must be after sourcing dotfiles
+source ../state/env.sh
+
+main() {
 
     print_double_line
     echo 'Installing VSCode CLI'
     code_install
     print_double_line
-    echo 'Installing mamba'
+    echo "Installing mamba to ${MAMBA_ROOT_PREFIX}"
     mamba_install
     print_double_line
     echo 'Installing system environment via mamba'
