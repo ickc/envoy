@@ -8,6 +8,7 @@ __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 
+# shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
 # helpers ##############################################################
@@ -22,7 +23,7 @@ print_line() {
 
 ########################################################################
 
-install() {
+mamba_install() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) ;;
         Darwin-x86_64) ;;
@@ -36,7 +37,7 @@ install() {
 
     print_double_line
     echo Downloading to temp dir "${DOWNLOADDIR}"
-    cd "${DOWNLOADDIR}"
+    cd "${DOWNLOADDIR}" || exit 1
     curl -L "${downloadUrl}" -o Miniforge3.sh
     chmod +x Miniforge3.sh
 
@@ -54,16 +55,16 @@ install() {
     rm -rf "${DOWNLOADDIR}"
 }
 
-uninstall() {
+mamba_uninstall() {
     rm -rf "${MAMBA_ROOT_PREFIX}"
 }
 
 case "$1" in
     install)
-        install
+        mamba_install
         ;;
     uninstall)
-        uninstall
+        mamba_uninstall
         ;;
     *)
         echo "Usage: MAMBA_ROOT_PREFIX=... $0 [install|uninstall]"
