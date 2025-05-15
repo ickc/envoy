@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -eo pipefail
 
 # shellcheck source=../state/env.sh
 source ../state/env.sh
