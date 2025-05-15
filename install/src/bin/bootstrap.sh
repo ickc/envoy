@@ -41,3 +41,5 @@ main() {
 
     ssh_dir_install
 }
+
+main
