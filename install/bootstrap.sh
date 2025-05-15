@@ -2,8 +2,6 @@
 
 set -eo pipefail
 
-__OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
-MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
 # git 2.3.0 or later is required
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
@@ -250,7 +248,7 @@ zim_uninstall() {
     rm -rf "${ZIM_HOME}"
 }
 
-main() {
+source_dotfiles() {
     print_double_line
     echo 'Temporarily downloading dotfiles'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
@@ -259,12 +257,20 @@ main() {
     . ~/.zshenv || true
     # shellcheck disable=SC1090
     . ~/.zshrc || true
+}
+
+source_dotfiles
+# this must be after sourcing dotfiles
+__OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
+MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
+
+main() {
 
     print_double_line
     echo 'Installing VSCode CLI'
     code_install
     print_double_line
-    echo 'Installing mamba'
+    echo "Installing mamba to ${MAMBA_ROOT_PREFIX}"
     mamba_install
     print_double_line
     echo 'Installing system environment via mamba'
