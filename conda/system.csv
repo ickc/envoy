@@ -1,5 +1,4 @@
 name,channel,ignored,version,latest_version,depended,notes,summary,doc_url,depends_on_python,linux-64,linux-aarch64,linux-ppc64le,noarch,osx-64,osx-arm64,win-32,win-64,win-arm64
-awk,,False,,20250116,,,One true awk,,False,True,True,True,False,True,True,False,False,False
 bash,,False,,5.2.21,,,Bourne Again Shell,https://www.gnu.org/software/bash/manual/,False,True,True,True,False,True,True,False,False,False
 bat,,False,,0.25.0,,,A cat(1) clone with syntax highlighting and Git integration,,False,True,True,True,False,True,True,False,True,False
 bat-extras,,False,,2024.08.24,,,Bash scripts that integrate bat with various command line tools,,False,False,False,False,True,False,False,False,False,False
@@ -20,6 +19,7 @@ ffmpeg,,False,,7.1.1,,,"Cross-platform solution to record, convert and stream au
 file,,False,,5.46,,,Fine Free File Command,,False,True,True,True,False,True,True,False,False,False
 findutils,,False,,4.10.0,,,The GNU Find Utilities are the basic directory searching utilities of the GNU operating system.,https://www.gnu.org/software/findutils/manual/find.html,False,True,True,True,False,True,True,False,False,False
 fzf,,False,,0.62.0,,,A command-line fuzzy finder,,False,True,True,True,False,True,True,False,True,False
+gawk,,False,,5.3.1,,,The awk utility interprets a special-purpose programming language that makes it easy to handle simple data-reformatting jobs.,https://www.gnu.org/software/gawk/manual/gawk.html,False,True,True,True,False,True,True,False,False,False
 gh,,False,,2.72.0,,,Github CLI.,https://cli.github.com/,False,True,True,True,False,True,True,False,True,False
 ghostscript,,False,,10.04.0,,,An interpreter for the PostScript language and for PDF,,False,True,True,True,False,True,True,False,True,False
 git,,False,,2.49.0,,,distributed version control system,,False,True,True,True,False,True,True,True,True,False
