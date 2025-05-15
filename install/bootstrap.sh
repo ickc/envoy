@@ -248,18 +248,18 @@ zim_uninstall() {
     rm -rf "${ZIM_HOME}"
 }
 
-source_dotfiles() {
+download_dotfiles() {
     print_double_line
     echo 'Temporarily downloading dotfiles'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
     github_download_file_to ickc dotfiles master config/zsh/.zshrc ~/.zshrc
-    # shellcheck disable=SC1090
-    . ~/.zshenv || true
-    # shellcheck disable=SC1090
-    . ~/.zshrc || true
 }
 
-source_dotfiles
+download_dotfiles
+# shellcheck disable=SC1090
+. ~/.zshenv || true
+# shellcheck disable=SC1090
+. ~/.zshrc || true
 # this must be after sourcing dotfiles
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
