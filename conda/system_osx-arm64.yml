@@ -1,7 +1,6 @@
 channels:
 - conda-forge
 dependencies:
-- awk
 - bash
 - bat
 - bat-extras
@@ -22,6 +21,7 @@ dependencies:
 - file
 - findutils
 - fzf
+- gawk
 - gh
 - ghostscript
 - git
