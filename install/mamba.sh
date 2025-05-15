@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 __CONDA_PREFIX="${__CONDA_PREFIX:-"${HOME}/.miniforge3"}"
 # https://unix.stackexchange.com/a/84980/192799

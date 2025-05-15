@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
 
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 
