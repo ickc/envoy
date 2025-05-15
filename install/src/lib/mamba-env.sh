@@ -5,6 +5,7 @@ NAME="${NAME:-system}"
 
 PREFIX="${__OPT_ROOT}/${NAME}"
 
+# shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
 install() {

@@ -4,6 +4,7 @@ source ../state/env.sh
 VERSION=1.0.4
 BINDIR="${__OPT_ROOT}/bin"
 
+# shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
 install() {

@@ -4,6 +4,7 @@ source ../state/env.sh
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 
+# shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
 # helpers ##############################################################
@@ -32,7 +33,7 @@ install() {
 
     print_double_line
     echo Downloading to temp dir "${DOWNLOADDIR}"
-    cd "${DOWNLOADDIR}"
+    cd "${DOWNLOADDIR}" || exit 1
     curl -L "${downloadUrl}" -o Miniforge3.sh
     chmod +x Miniforge3.sh
 

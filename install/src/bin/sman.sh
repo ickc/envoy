@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+# shellcheck source=../lib/sman.sh
 source ../lib/sman.sh
 
 case "$1" in

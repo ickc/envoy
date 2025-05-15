@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+# shellcheck source=../lib/mamba-env.sh
 source ../lib/mamba-env.sh
 
 case "$1" in
