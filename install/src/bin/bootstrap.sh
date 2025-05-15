@@ -2,8 +2,9 @@
 
 set -eo pipefail
 
+source ../lib/util/git.sh
+
 download_dotfiles() {
-    print_double_line
     echo 'Temporarily downloading dotfiles'
     github_download_file_to ickc dotfiles master config/zsh/.zshenv ~/.zshenv
     github_download_file_to ickc dotfiles master config/zsh/.zshrc ~/.zshrc
@@ -16,7 +17,6 @@ download_dotfiles
 . ~/.zshrc || true
 # this must be after sourcing dotfiles
 source ../state/env.sh
-source ../lib/util/git.sh
 source ../lib/util/helpers.sh
 source ../lib/util/ssh.sh
 source ../lib/code.sh
