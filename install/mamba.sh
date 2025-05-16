@@ -11,11 +11,6 @@ print_double_line() {
 print_line() {
     echo '--------------------------------------------------------------------------------'
 }
-
-get_script_dir() {
-    # shellcheck disable=SC2312
-    cd "$(dirname "${BASH_SOURCE[0]}")" && pwd
-}
 # https://unix.stackexchange.com/a/84980/192799
 DOWNLOADDIR="$(mktemp -d 2> /dev/null || mktemp -d -t 'miniforge3')"
 
