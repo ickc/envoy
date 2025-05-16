@@ -5,3 +5,8 @@ print_double_line() {
 print_line() {
     echo '--------------------------------------------------------------------------------'
 }
+
+get_script_dir() {
+    # shellcheck disable=SC2312
+    cd "$(dirname "${BASH_SOURCE[0]}")" && pwd
+}
