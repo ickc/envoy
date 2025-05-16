@@ -179,6 +179,7 @@ mamba_install() {
 
     print_line
     echo Removing temp dir "${DOWNLOADDIR}"
+    cd - || exit 1
     rm -rf "${DOWNLOADDIR}"
 }
 
