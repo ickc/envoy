@@ -45,6 +45,9 @@ main() {
     echo 'Installing zim'
     zim_install
 
+    # shellcheck disable=SC1090
+    . ~/.zshrc || true
+
     print_double_line
     echo 'Generating SSH key and login to GitHub'
     ssh_keygen_and_login
