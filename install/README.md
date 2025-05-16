@@ -9,5 +9,5 @@ All files in `bin/` is compiled to this directory.
 # Bootstrap script
 
 ```bash
-curl -L https://raw.githubusercontent.com/ickc/envoy/refs/heads/main/install/bootstrap.sh | bash
+bash <(curl -L https://raw.githubusercontent.com/ickc/envoy/refs/heads/main/install/bootstrap.sh)
 ```
