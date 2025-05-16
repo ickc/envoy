@@ -59,6 +59,7 @@ main() {
         echo 'Cloning envoy'
         github_clone_git ickc envoy
     fi
+    envoy/completion/generate.sh
     if [[ ! -d ~/git/source/dotfiles ]]; then
         print_double_line
         echo 'Cloning dotfiles'
