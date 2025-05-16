@@ -4,6 +4,41 @@ set -euo pipefail
 
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
+print_double_line() {
+    echo '================================================================================'
+}
+
+print_line() {
+    echo '--------------------------------------------------------------------------------'
+}
+
+get_script_dir() {
+    # shellcheck disable=SC2312
+    cd "$(dirname "${BASH_SOURCE[0]}")" && pwd
+}
+# git 2.3.0 or later is required
+export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+
+github_clone_git() {
+    user="$1"
+    repo="$2"
+    git clone "git@github.com:${user}/${repo}.git"
+}
+
+github_clone_https() {
+    user="$1"
+    repo="$2"
+    git clone "https://github.com/${user}/${repo}.git"
+}
+
+github_download_file_to() {
+    user="$1"
+    repo="$2"
+    branch="$3"
+    file="$4"
+    dest="$5"
+    curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
+}
 NAME="${NAME:-system}"
 
 PREFIX="${__OPT_ROOT}/${NAME}"
@@ -11,7 +46,7 @@ PREFIX="${__OPT_ROOT}/${NAME}"
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-mamba_env_install() {
+get_conda_env_file() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) CONDA_UNAME=osx-arm64 ;;
         Darwin-x86_64) CONDA_UNAME=osx-64 ;;
@@ -20,12 +55,22 @@ mamba_env_install() {
         Linux-ppc64le) CONDA_UNAME=linux-ppc64le ;;
         *) exit 1 ;;
     esac
-    file="conda/${NAME}_${CONDA_UNAME}.yml"
+    local filename
+    filename="${NAME}_${CONDA_UNAME}.yml"
+    # shellcheck disable=SC2312
+    __conda_env_file="$(dirname "$(get_script_dir)")/conda/${filename}"
+    if [[ ! -f ${__conda_env_file} ]]; then
+        __conda_env_file="${filename}"
+        github_download_file_to ickc envoy main "conda/${filename}" "${filename}"
+    fi
+}
 
+mamba_env_install() {
+    get_conda_env_file
     if [[ -d ${PREFIX} ]]; then
-        "${MAMBA_ROOT_PREFIX}/bin/mamba" env update -f "${file}" -p "${PREFIX}" -y --prune
+        "${MAMBA_ROOT_PREFIX}/bin/mamba" env update -f "${__conda_env_file}" -p "${PREFIX}" -y --prune
     else
-        "${MAMBA_ROOT_PREFIX}/bin/mamba" env create -f "${file}" -p "${PREFIX}" -y
+        "${MAMBA_ROOT_PREFIX}/bin/mamba" env create -f "${__conda_env_file}" -p "${PREFIX}" -y
     fi
 }
 
