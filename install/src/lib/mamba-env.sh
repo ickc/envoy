@@ -16,20 +16,22 @@ get_conda_env_file() {
     esac
     local filename
     filename="${NAME}_${CONDA_UNAME}.yml"
-    # shellcheck disable=SC2312
-    __conda_env_file="$(dirname "$(get_script_dir)")/conda/${filename}"
-    if [[ ! -f ${__conda_env_file} ]]; then
-        __conda_env_file="${filename}"
+    if [[ -z ${__MAMBA_ENV_DOWNLOAD+x} ]]; then
+        # use local file
+        # shellcheck disable=SC2312
+        __MAMBA_ENV_FILE="conda/${filename}"
+    else
         github_download_file_to ickc envoy main "conda/${filename}" "${filename}"
+        __MAMBA_ENV_FILE="${filename}"
     fi
 }
 
 mamba_env_install() {
     get_conda_env_file
     if [[ -d ${PREFIX} ]]; then
-        "${MAMBA_ROOT_PREFIX}/bin/mamba" env update -f "${__conda_env_file}" -p "${PREFIX}" -y --prune
+        "${MAMBA_ROOT_PREFIX}/bin/mamba" env update -f "${__MAMBA_ENV_FILE}" -p "${PREFIX}" -y --prune
     else
-        "${MAMBA_ROOT_PREFIX}/bin/mamba" env create -f "${__conda_env_file}" -p "${PREFIX}" -y
+        "${MAMBA_ROOT_PREFIX}/bin/mamba" env create -f "${__MAMBA_ENV_FILE}" -p "${PREFIX}" -y
     fi
 }
 
