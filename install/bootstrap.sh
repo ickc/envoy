@@ -267,9 +267,14 @@ sman_install_rc() {
 }
 
 sman_install_snippets() {
-    mkdir -p ~/git/source
-    cd ~/git/source
-    github_clone_git ickc sman-snippets
+    if [[ -d ~/git/source/sman-snippets ]]; then
+        cd ~/git/source/sman-snippets
+        git pull
+    else
+        mkdir -p ~/git/source
+        cd ~/git/source
+        github_clone_git ickc sman-snippets
+    fi
 }
 
 sman_install() {
