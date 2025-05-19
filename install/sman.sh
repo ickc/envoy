@@ -4,13 +4,38 @@ set -euo pipefail
 
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-"${HOME}/.config"}"
+ZDOTDIR="${ZDOTDIR:-"${XDG_CONFIG_HOME}/zsh"}"
+# git 2.3.0 or later is required
+export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
+
+github_clone_git() {
+    user="$1"
+    repo="$2"
+    git clone "git@github.com:${user}/${repo}.git"
+}
+
+github_clone_https() {
+    user="$1"
+    repo="$2"
+    git clone "https://github.com/${user}/${repo}.git"
+}
+
+github_download_file_to() {
+    user="$1"
+    repo="$2"
+    branch="$3"
+    file="$4"
+    dest="$5"
+    curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
+}
 VERSION=1.0.4
 BINDIR="${__OPT_ROOT}/bin"
 
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-sman_install() {
+sman_install_bin() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) GO_UNAME=darwin-arm64 ;;
         Darwin-x86_64) GO_UNAME=darwin-amd64 ;;
@@ -34,8 +59,26 @@ sman_install() {
     mv "${filename}" "${BINDIR}/sman"
 }
 
+sman_install_rc() {
+    mkdir -p "${ZDOTDIR}/functions"
+    github_download_file_to ickc sman master sman.rc "${ZDOTDIR}/functions/sman.rc"
+}
+
+sman_install_snippets() {
+    mkdir -p ~/git/source
+    cd ~/git/source
+    github_clone_git ickc sman-snippets
+}
+
+sman_install() {
+    sman_install_bin
+    sman_install_rc
+    sman_install_snippets
+}
+
 sman_uninstall() {
-    rm -f "${BINDIR}/sman"
+    rm -f "${BINDIR}/sman" "${ZDOTDIR}/functions/sman.rc"
+    rm -rf ~/git/source/sman-snippets
 }
 
 case "$1" in

@@ -4,6 +4,8 @@ set -euo pipefail
 
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-"${HOME}/.config"}"
+ZDOTDIR="${ZDOTDIR:-"${XDG_CONFIG_HOME}/zsh"}"
 print_double_line() {
     echo '================================================================================'
 }

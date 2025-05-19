@@ -42,6 +42,8 @@ download_dotfiles
 # this must be after sourcing dotfiles
 __OPT_ROOT="${__OPT_ROOT:-"${HOME}/.local"}"
 MAMBA_ROOT_PREFIX="${MAMBA_ROOT_PREFIX:-"${HOME}/.miniforge3"}"
+XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-"${HOME}/.config"}"
+ZDOTDIR="${ZDOTDIR:-"${XDG_CONFIG_HOME}/zsh"}"
 print_double_line() {
     echo '================================================================================'
 }
@@ -235,7 +237,7 @@ BINDIR="${__OPT_ROOT}/bin"
 # shellcheck disable=SC2312
 read -r __OSTYPE __ARCH <<< "$(uname -sm)"
 
-sman_install() {
+sman_install_bin() {
     case "${__OSTYPE}-${__ARCH}" in
         Darwin-arm64) GO_UNAME=darwin-arm64 ;;
         Darwin-x86_64) GO_UNAME=darwin-amd64 ;;
@@ -259,8 +261,26 @@ sman_install() {
     mv "${filename}" "${BINDIR}/sman"
 }
 
+sman_install_rc() {
+    mkdir -p "${ZDOTDIR}/functions"
+    github_download_file_to ickc sman master sman.rc "${ZDOTDIR}/functions/sman.rc"
+}
+
+sman_install_snippets() {
+    mkdir -p ~/git/source
+    cd ~/git/source
+    github_clone_git ickc sman-snippets
+}
+
+sman_install() {
+    sman_install_bin
+    sman_install_rc
+    sman_install_snippets
+}
+
 sman_uninstall() {
-    rm -f "${BINDIR}/sman"
+    rm -f "${BINDIR}/sman" "${ZDOTDIR}/functions/sman.rc"
+    rm -rf ~/git/source/sman-snippets
 }
 ZIM_HOME="${ZIM_HOME:-${HOME}/.zim}"
 
