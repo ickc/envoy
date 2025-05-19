@@ -3,6 +3,7 @@
 set -euo pipefail
 
 source ../state/env.sh
+source ../lib/util/git.sh
 source ../lib/sman.sh
 
 case "$1" in
