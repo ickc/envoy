@@ -55,7 +55,6 @@ dependencies:
 - sed
 - starship
 - tar
-- time
 - tmux
 - tokei
 - tree

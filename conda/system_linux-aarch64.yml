@@ -60,7 +60,6 @@ dependencies:
 - shellcheck
 - starship
 - tar
-- time
 - tmux
 - tokei
 - tree
