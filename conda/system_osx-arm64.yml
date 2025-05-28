@@ -42,6 +42,7 @@ dependencies:
 - libarchive
 - lsdeluxe
 - make
+- mediainfo
 - mosh
 - nano
 - nvtop

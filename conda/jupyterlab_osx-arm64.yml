@@ -11,6 +11,10 @@ dependencies:
 - jupyterlab-geojson
 - jupyterlab-myst
 - jupytext
+- nbconvert
+- pandoc
+- playwright
 - plotly
+- pyqtwebengine
 - pyviz_comms
 name: jupyterlab

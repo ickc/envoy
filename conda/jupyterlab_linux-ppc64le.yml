@@ -11,6 +11,7 @@ dependencies:
 - jupyterlab-geojson
 - jupyterlab-myst
 - jupytext
+- nbconvert
 - plotly
 - pyviz_comms
 name: jupyterlab
