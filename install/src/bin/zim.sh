@@ -4,7 +4,7 @@ set -e
 
 source ../lib/zim.sh
 
-case "$1" in
+case "${1}" in
     install)
         zim_install
         ;;
@@ -12,7 +12,7 @@ case "$1" in
         zim_uninstall
         ;;
     *)
-        echo "Usage: ZIM_HOME=... $0 [install|uninstall]"
+        echo "Usage: ZIM_HOME=... ${0} [install|uninstall]"
         exit 1
         ;;
 esac

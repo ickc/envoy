@@ -64,7 +64,7 @@ case "${1:-}" in
         mamba_uninstall
         ;;
     *)
-        echo "Usage: MAMBA_ROOT_PREFIX=... $0 [install|uninstall]"
+        echo "Usage: MAMBA_ROOT_PREFIX=... ${0} [install|uninstall]"
         exit 1
         ;;
 esac

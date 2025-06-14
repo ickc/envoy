@@ -10,23 +10,23 @@ ZDOTDIR="${ZDOTDIR:-"${XDG_CONFIG_HOME}/zsh"}"
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
 github_clone_git() {
-    user="$1"
-    repo="$2"
+    user="${1}"
+    repo="${2}"
     git clone "git@github.com:${user}/${repo}.git"
 }
 
 github_clone_https() {
-    user="$1"
-    repo="$2"
+    user="${1}"
+    repo="${2}"
     git clone "https://github.com/${user}/${repo}.git"
 }
 
 github_download_file_to() {
-    user="$1"
-    repo="$2"
-    branch="$3"
-    file="$4"
-    dest="$5"
+    user="${1}"
+    repo="${2}"
+    branch="${3}"
+    file="${4}"
+    dest="${5}"
     curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
 }
 VERSION=1.0.4
@@ -94,7 +94,7 @@ case "${1:-}" in
         sman_uninstall
         ;;
     *)
-        echo "Usage: __OPT_ROOT=... $0 [install|uninstall]"
+        echo "Usage: __OPT_ROOT=... ${0} [install|uninstall]"
         exit 1
         ;;
 esac

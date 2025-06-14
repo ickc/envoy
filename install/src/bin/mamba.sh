@@ -6,7 +6,7 @@ source ../state/env.sh
 source ../lib/util/helpers.sh
 source ../lib/mamba.sh
 
-case "$1" in
+case "${1}" in
     install)
         mamba_install
         ;;
@@ -14,7 +14,7 @@ case "$1" in
         mamba_uninstall
         ;;
     *)
-        echo "Usage: MAMBA_ROOT_PREFIX=... $0 [install|uninstall]"
+        echo "Usage: MAMBA_ROOT_PREFIX=... ${0} [install|uninstall]"
         exit 1
         ;;
 esac

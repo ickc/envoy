@@ -17,23 +17,23 @@ print_line() {
 export GIT_SSH_COMMAND="ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
 
 github_clone_git() {
-    user="$1"
-    repo="$2"
+    user="${1}"
+    repo="${2}"
     git clone "git@github.com:${user}/${repo}.git"
 }
 
 github_clone_https() {
-    user="$1"
-    repo="$2"
+    user="${1}"
+    repo="${2}"
     git clone "https://github.com/${user}/${repo}.git"
 }
 
 github_download_file_to() {
-    user="$1"
-    repo="$2"
-    branch="$3"
-    file="$4"
-    dest="$5"
+    user="${1}"
+    repo="${2}"
+    branch="${3}"
+    file="${4}"
+    dest="${5}"
     curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
 }
 NAME="${NAME:-system}"
@@ -88,7 +88,7 @@ case "${1:-}" in
         mamba_env_uninstall
         ;;
     *)
-        echo "Usage: MAMBA_ROOT_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) $0 [install|uninstall]"
+        echo "Usage: MAMBA_ROOT_PREFIX=... __OPT_ROOT=... NAME=(system|py313|...) ${0} [install|uninstall]"
         exit 1
         ;;
 esac

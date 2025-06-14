@@ -6,7 +6,7 @@ if [[ $# -ne 1 ]]; then
     exit 1
 fi
 
-FILENAME="$1"
+FILENAME="${1}"
 
 # Check if the file exists
 if [[ ! -f ${FILENAME} ]]; then
