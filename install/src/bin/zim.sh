@@ -4,7 +4,7 @@ set -e
 
 source ../lib/zim.sh
 
-case "${1}" in
+case "${1:-}" in
     install)
         zim_install
         ;;

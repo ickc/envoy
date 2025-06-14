@@ -6,7 +6,7 @@ source ../state/env.sh
 source ../lib/util/helpers.sh
 source ../lib/mamba.sh
 
-case "${1}" in
+case "${1:-}" in
     install)
         mamba_install
         ;;

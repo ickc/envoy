@@ -12,7 +12,7 @@ zim_uninstall() {
     rm -rf "${ZIM_HOME}"
 }
 
-case "${1}" in
+case "${1:-}" in
     install)
         zim_install
         ;;

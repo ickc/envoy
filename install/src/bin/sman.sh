@@ -6,7 +6,7 @@ source ../state/env.sh
 source ../lib/util/git.sh
 source ../lib/sman.sh
 
-case "${1}" in
+case "${1:-}" in
     install)
         sman_install
         ;;

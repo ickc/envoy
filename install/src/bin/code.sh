@@ -5,7 +5,7 @@ set -euo pipefail
 source ../state/env.sh
 source ../lib/code.sh
 
-case "${1}" in
+case "${1:-}" in
     install)
         code_install
         ;;

@@ -7,7 +7,7 @@ source ../lib/util/helpers.sh
 source ../lib/util/git.sh
 source ../lib/mamba-env.sh
 
-case "${1}" in
+case "${1:-}" in
     install)
         mamba_env_install
         ;;
