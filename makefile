@@ -8,7 +8,7 @@ SHELL = /usr/bin/env bash
 format:  ## format all shell scripts
 	find . -type f -name '*.sh' \
 		-exec sed -i -E \
-			-e 's/\$$([a-zA-Z_][a-zA-Z0-9_]*)/$${\1}/g' \
+			-e 's/\$$([a-zA-Z_][a-zA-Z0-9_]*|[0-9]+)/$${\1}/g' \
 			-e 's/([^[])\[ ([^]]+) \]/\1[[ \2 ]]/g' \
 			{} + \
 		-exec shfmt \
