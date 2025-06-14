@@ -86,7 +86,7 @@ sman_uninstall() {
     rm -rf ~/git/source/sman-snippets
 }
 
-case "$1" in
+case "${1:-}" in
     install)
         sman_install
         ;;

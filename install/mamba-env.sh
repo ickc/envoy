@@ -80,7 +80,7 @@ mamba_env_uninstall() {
     rm -rf "${PREFIX}"
 }
 
-case "$1" in
+case "${1:-}" in
     install)
         mamba_env_install
         ;;

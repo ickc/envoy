@@ -56,7 +56,7 @@ mamba_uninstall() {
     rm -rf "${MAMBA_ROOT_PREFIX}"
 }
 
-case "$1" in
+case "${1:-}" in
     install)
         mamba_install
         ;;

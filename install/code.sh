@@ -64,7 +64,7 @@ code_uninstall() {
     rm -rf "${BINDIR}/code"
 }
 
-case "$1" in
+case "${1:-}" in
     install)
         code_install
         ;;
