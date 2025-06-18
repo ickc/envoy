@@ -39,9 +39,6 @@ main() {
     echo 'Installing system environment via mamba'
     mamba_env_install
     print_double_line
-    echo 'Installing sman'
-    sman_install
-    print_double_line
     echo 'Installing zim'
     zim_install
 
@@ -51,6 +48,11 @@ main() {
     print_double_line
     echo 'Generating SSH key and login to GitHub'
     ssh_keygen_and_login
+
+    # this clone sman-snippets so it must be after ssh_keygen_and_login
+    print_double_line
+    echo 'Installing sman'
+    sman_install
 
     mkdir -p ~/git/source
     cd ~/git/source
