@@ -27,6 +27,7 @@ github_download_file_to() {
     branch="${3}"
     file="${4}"
     dest="${5}"
+    mkdir -p "${dest%/*}"
     curl -L "https://raw.githubusercontent.com/${user}/${repo}/refs/heads/${branch}/${file}" -o "${dest}"
 }
 VERSION=1.0.4
