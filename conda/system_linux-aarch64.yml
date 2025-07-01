@@ -12,6 +12,7 @@ dependencies:
 - curl
 - difftastic
 - diffutils
+- direnv
 - dua-cli
 - dust
 - exiftool
