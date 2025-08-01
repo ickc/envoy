@@ -131,3 +131,17 @@ yamlloader = ">=1.5.1,<2"
 
 [tool.pixi.pypi-dependencies]
 bsos = { path = ".", editable = true}
+
+[tool.pixi.tasks]
+# generate
+generate = { depends-on = [{ task = "generate-conda" }, { task = "generate-jupyterlab" }, { task = "generate-system" }], description = "Generate conda environment files." }
+generate-conda = { cmd = "python -m bsos.conda_web_api generate conda/conda.csv", description = "Generate conda/conda.csv" }
+generate-jupyterlab = { cmd = "python -m bsos.conda_web_api generate conda/jupyterlab.csv -v 3.13 --name-format jupyterlab", description = "Generate conda/jupyterlab.csv" }
+generate-system = { cmd = "python -m bsos.conda_web_api generate conda/system.csv -v 3.13 --name-format system --no-python", description = "Generate conda/system.csv" }
+
+# clean
+clean = { cmd = "python -m bsos.conda_web_api clean", description = "Remove the bsos cache when using conda_web_api." }
+update = { depends-on = [{ task = "clean"}, { task = "generate" }], description = "Update conda environment files by cleaning the cache and regenerating them." }
+
+# misc
+list-depended = { cmd = "tail -n +2 conda/conda.csv | cut -d, -f6 | tr '/' '\n' | sort -u", description = "List all depended packages in conda/conda.csv" }
