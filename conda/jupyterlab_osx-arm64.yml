@@ -13,6 +13,8 @@ dependencies:
 - jupytext
 - nbconvert
 - pandoc
+- pixi
+- pixi-kernel
 - playwright
 - plotly
 - pyqtwebengine

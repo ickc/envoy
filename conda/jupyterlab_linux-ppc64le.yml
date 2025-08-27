@@ -12,6 +12,8 @@ dependencies:
 - jupyterlab-myst
 - jupytext
 - nbconvert
+- pixi
+- pixi-kernel
 - plotly
 - pyviz_comms
 name: jupyterlab
