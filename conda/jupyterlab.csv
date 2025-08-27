@@ -10,6 +10,8 @@ jupyterlab-myst,,False,,2.4.2,,,A Myst renderer for JupyterLab,,True,False,False
 jupytext,,False,,master,,,"Jupyter notebooks as Markdown documents, Julia, Python or R scripts",https://github.com/mwouts/jupytext/blob/master/README.md,False,False,False,False,True,False,False,False,False
 nbconvert,,False,,7.16.6,,,Converting Jupyter Notebooks,https://nbconvert.readthedocs.org/,True,True,True,True,True,True,True,True,True
 pandoc,,False,,3.7.0.2,,,The universal markup converter,http://pandoc.org/MANUAL.html,False,True,True,False,False,True,True,True,True
+pixi,,False,,0.50.2,,,"pixi is a cross-platform, multi-language package manager and workflow tool build on the shoulders of the conda ecosystem.",,False,True,True,True,False,True,True,False,True
+pixi-kernel,,False,,0.6.6,,,Jupyter kernels using Pixi for reproducible notebooks,,True,False,False,False,True,False,False,False,False
 playwright,,False,,1.54.2,,,"Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",https://playwright.dev/docs/,False,True,True,False,False,True,True,False,True
 plotly,,False,,6.2.0,,,"An interactive, browser-based graphing library for Python",https://plot.ly/python/,True,True,False,False,True,True,False,True,True
 pyqtwebengine,,False,,5.15.11,,,Python bindings for the Qt cross platform application toolkit,https://www.riverbankcomputing.com/static/Docs/PyQt5/,True,True,True,False,False,True,True,False,True
