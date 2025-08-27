@@ -24,8 +24,10 @@ def parse_conda_build(build: str) -> tuple[int, int]:
 
     This does not attempt to be robust, just quick and dirty getting the job done here.
 
-    TODO: py314
+    TODO: py315
     """
+    if "py314" in build:
+        return 3, 14
     if "py313" in build:
         return 3, 13
     if "py312" in build:
