@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 import shutil
 from dataclasses import dataclass
 from functools import cached_property
@@ -19,37 +20,16 @@ import yamlloader  # type: ignore
 CACHE_DIR: Path = Path(platformdirs.user_cache_dir(appname="bsos", ensure_exists=True))
 
 
-def parse_conda_build(build: str) -> tuple[int, int]:
+def parse_conda_build(build: str, regex=re.compile(r"py(\d)(\d+)h")) -> tuple[int, int]:
     """Parse conda build string and return python version as tuple.
 
     This does not attempt to be robust, just quick and dirty getting the job done here.
-
-    TODO: py315
     """
-    if "py314" in build:
-        return 3, 14
-    if "py313" in build:
-        return 3, 13
-    if "py312" in build:
-        return 3, 12
-    if "py311" in build:
-        return 3, 11
-    if "py310" in build:
-        return 3, 10
-    if "py39" in build:
-        return 3, 9
-    if "py38" in build:
-        return 3, 8
-    if "py37" in build:
-        return 3, 7
-    if "py36" in build:
-        return 3, 6
-    if "py35" in build:
-        return 3, 5
-    if "py34" in build:
-        return 3, 4
-    if "py27" in build:
-        return 2, 7
+    match = regex.search(build)
+    if match:
+        major_version = int(match.group(1))
+        minor_version = int(match.group(2))
+        return major_version, minor_version
     else:
         raise ValueError(f"Cannot parse {build}")
 
