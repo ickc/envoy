@@ -69,6 +69,7 @@ dependencies:
 - tokei
 - tree
 - unzip
+- uv
 - w3m
 - watch
 - wget

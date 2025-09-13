@@ -60,6 +60,7 @@ dependencies:
 - tokei
 - tree
 - unzip
+- uv
 - wget
 - which
 - zsh

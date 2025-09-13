@@ -65,6 +65,7 @@ dependencies:
 - tokei
 - tree
 - unzip
+- uv
 - wget
 - which
 - zellij
