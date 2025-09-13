@@ -4,14 +4,14 @@ bash_kernel,,False,,0.10.0,,,A Jupyter kernel for bash,https://github.com/takluy
 ipympl,,False,,0.9.7,,,Matplotlib Jupyter Extension,,True,True,False,False,True,True,False,True,True
 ipywidgets,,False,,8.1.7,,,Jupyter Interactive Widgets,https://ipywidgets.readthedocs.io/en/latest/,True,True,False,False,True,True,False,True,True
 jupyter_bokeh,,False,,4.0.5,,,A Jupyter extension for rendering Bokeh content.,,True,False,False,False,True,False,False,False,False
-jupyterlab,,False,,4.4.6,,,"An extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture.",https://jupyterlab.readthedocs.io,True,True,False,False,True,True,False,True,True
+jupyterlab,,False,,4.4.7,,,"An extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture.",https://jupyterlab.readthedocs.io,True,True,False,False,True,True,False,True,True
 jupyterlab-geojson,,False,,3.4.0,,,GeoJSON renderer for JupyterLab,,True,False,False,False,True,False,False,False,False
 jupyterlab-myst,,False,,2.4.2,,,A Myst renderer for JupyterLab,,True,False,False,False,True,False,False,False,False
 jupytext,,False,,master,,,"Jupyter notebooks as Markdown documents, Julia, Python or R scripts",https://github.com/mwouts/jupytext/blob/master/README.md,False,False,False,False,True,False,False,False,False
 nbconvert,,False,,7.16.6,,,Converting Jupyter Notebooks,https://nbconvert.readthedocs.org/,True,True,True,True,True,True,True,True,True
-pandoc,,False,,3.7.0.2,,,The universal markup converter,http://pandoc.org/MANUAL.html,False,True,True,False,False,True,True,True,True
-pixi,,False,,0.53.0,,,"pixi is a cross-platform, multi-language package manager and workflow tool build on the shoulders of the conda ecosystem.",,False,True,True,True,False,True,True,False,True
-pixi-kernel,,False,,0.6.6,,,Jupyter kernels using Pixi for reproducible notebooks,,True,False,False,False,True,False,False,False,False
+pandoc,,False,,3.8,,,The universal markup converter,http://pandoc.org/MANUAL.html,False,True,True,False,False,True,True,True,True
+pixi,,False,,0.54.2,,,"pixi is a cross-platform, multi-language package manager and workflow tool build on the shoulders of the conda ecosystem.",,False,True,True,True,False,True,True,False,True
+pixi-kernel,,False,,0.6.7,,,Jupyter kernels using Pixi for reproducible notebooks,,True,False,False,False,True,False,False,False,False
 playwright,,False,,1.55.0,,,"Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",https://playwright.dev/docs/,False,True,True,False,False,True,True,False,True
 plotly,,False,,6.3.0,,,"An interactive, browser-based graphing library for Python",https://plot.ly/python/,True,True,False,False,True,True,False,True,True
 pyqtwebengine,,False,,5.15.11,,,Python bindings for the Qt cross platform application toolkit,https://www.riverbankcomputing.com/static/Docs/PyQt5/,True,True,True,False,False,True,True,False,True

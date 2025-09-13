@@ -16,14 +16,14 @@ bidict,,True,,0.23.1,,,"Efficient, Pythonic bidirectional map implementation and
 black,,False,,25.1.0,,,The uncompromising code formatter.,https://black.readthedocs.io/,True,True,True,False,True,True,True,True,False,True,False
 bleach,,False,,6.2.0,astropy,,"Easy, whitelist-based HTML-sanitizing tool",https://bleach.readthedocs.io/,True,True,False,False,False,True,True,False,True,True,False
 blosc,,False,,1.21.6,pandas,,"A blocking, shuffling and loss-less compression library that can be faster than `memcpy()`",,False,True,True,False,True,False,True,True,False,True,False
-bokeh,,False,,3.7.3,,https://docs.bokeh.org/en/latest/docs/first_steps/installation.html#installing-optional-dependencies,Statistical and novel interactive HTML plots for Python,https://docs.bokeh.org,True,True,True,False,True,True,True,True,True,True,False
+bokeh,,False,,3.8.0,,https://docs.bokeh.org/en/latest/docs/first_steps/installation.html#installing-optional-dependencies,Statistical and novel interactive HTML plots for Python,https://docs.bokeh.org,True,True,True,False,True,True,True,True,True,True,False
 boltons,,True,,25.0.0,,,"boltons should be builtins. Boltons is a set of over 160 BSD-licensed, pure-Python utilities in the same spirit as--and yet conspicuously missing from--the standard library.",,True,True,False,False,False,True,True,False,True,True,False
-bottleneck,,False,,1.5.0,pandas/astropy,,Fast NumPy array functions written in Cython.,https://bottleneck.readthedocs.io,True,True,True,False,True,False,True,True,True,True,False
+bottleneck,,False,,1.6.0,pandas/astropy,,Fast NumPy array functions written in Cython.,https://bottleneck.readthedocs.io,True,True,True,False,True,False,True,True,True,True,False
 bpytop,,True,,1.0.68,,,"Resource monitor that shows usage and stats for processor, memory, disks, network and processes.",,True,False,False,False,False,True,False,False,False,False,False
 bump2version,,False,,1.0.1,,,Version-bump your software with a single command!,https://github.com/c4urself/bump2version,True,True,False,False,False,True,True,False,False,False,False
 cairocffi,,True,,1.7.1,,,cffi-based cairo bindings for Python,,True,True,False,False,False,True,True,False,False,False,False
 certifi,,False,,2025.8.3,astropy,,Python package for providing Mozilla's CA Bundle.,https://pypi.python.org/pypi/certifi,True,True,True,False,True,True,True,True,True,True,False
-cffi,,False,,1.17.1,numba,,Foreign Function Interface for Python calling C code.,http://cffi.readthedocs.org,True,True,True,False,True,True,True,True,True,True,False
+cffi,,False,,1.17.1,numba,,Foreign Function Interface for Python calling C code.,https://cffi.readthedocs.io,True,True,True,False,True,True,True,True,True,True,False
 chardet,,False,,5.2.0,,,Universal character encoding detector,http://chardet.readthedocs.org/,True,True,True,False,True,True,True,True,True,True,False
 click,,True,,8.2.2,,,Composable command line interface toolkit,https://click.palletsprojects.com/,True,True,True,False,True,True,True,True,True,True,False
 colorama,,False,,0.4.6,numba,,Cross-platform colored terminal text,http://pypi.python.org/pypi/colorama,True,True,False,False,False,True,True,False,True,True,False
@@ -31,10 +31,10 @@ coloredlogs,,False,,15.0.1,,,Colored terminal output for Python's logging module
 colormath,,True,,3.0.0,,,Color math and conversion library.,http://python-colormath.readthedocs.io/en/latest/,True,True,False,False,False,True,True,False,True,True,False
 compilers,,False,,1.11.0,numba,,A metapackage to obtain compilers,,False,True,True,False,True,False,True,True,False,True,False
 conda,,True,,25.7.0,,,"OS-agnostic, system-level binary package and environment manager.",https://docs.conda.io/projects/conda/en/stable/,True,True,True,False,True,False,True,True,True,True,False
-conda-smithy,,True,,3.52.0,,,The tool for managing conda-forge feedstocks,,True,True,False,False,False,True,True,False,True,True,False
+conda-smithy,,True,,3.52.2,,,The tool for managing conda-forge feedstocks,,True,True,False,False,False,True,True,False,True,True,False
 contextily,,False,,1.6.2,,,Context geo-tiles in Python,,True,True,False,False,False,True,True,False,True,True,False
 cookiecutter,,True,,2.6.0,,,"A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template.",https://cookiecutter.readthedocs.io,True,True,False,False,False,True,True,False,True,True,False
-coverage,,False,,7.10.5,,,Code coverage measurement for Python,,True,True,True,False,True,True,True,True,True,True,False
+coverage,,False,,7.10.6,,,Code coverage measurement for Python,,True,True,True,False,True,True,True,True,True,True,False
 cuda-python,,True,,13.0.1,numba,,CUDA Python,https://nvidia.github.io/cuda-python/,True,True,True,False,True,True,False,False,False,True,False
 custom-inherit,,False,,2.4.1,,,A Python package that provides customized docstring inheritance schemes between derived classes and their parents.,https://github.com/rsokl/custom_inherit/blob/master/README.md,True,False,False,False,False,True,False,False,False,False,False
 cvxopt,,False,,1.3.2,statsmodels,,Convex optimization package,https://cvxopt.org/userguide,True,True,True,False,True,False,True,True,False,True,False
@@ -47,13 +47,13 @@ dautilpy,,False,,0.2.0,,,Data Analysis Utilities,,True,False,False,False,False,T
 decorator,,True,,5.2.1,,,Decorators for Humans,,True,True,False,False,False,True,True,False,True,True,False
 defopt,,False,,7.0.0,,,Effortless argument parser,,True,True,False,False,False,True,True,False,False,True,False
 descartes,,True,,1.1.0,,,Use geometric objects as matplotlib paths and patches,,True,True,False,False,False,True,True,False,True,True,False
-distributed,,True,,2025.7.0,,,Distributed scheduler for Dask,https://distributed.dask.org,True,True,True,False,True,True,True,True,True,True,False
+distributed,,True,,2025.9.0,,,Distributed scheduler for Dask,https://distributed.dask.org,True,True,True,False,True,True,True,True,True,True,False
 emcee,,False,,3.1.6,,,The Python ensemble sampling toolkit for MCMC,,True,True,False,False,False,True,True,False,True,True,False
 ephem,,False,,4.2,,,Basic astronomical computations for Python,http://rhodesmill.org/pyephem/,True,True,True,False,True,False,True,True,True,True,False
 fastcluster,,False,,1.3.0,seaborn,,Fast hierarchical clustering routines for R and Python.,https://github.com/dmuellner/fastcluster/raw/master/docs/fastcluster.pdf,True,True,False,False,False,False,True,True,True,True,False
 fastparquet,,False,,2024.11.0,pandas,,Python interface to the parquet format,,True,True,True,False,True,False,True,True,True,True,False
 feedgen,,False,,1.0.0,,,Generate web feeds in both ATOM and RSS format.,https://feedgen.kiesow.be/,True,False,False,False,False,True,False,False,False,False,False
-fire,,False,,0.7.0,,,Python Fire is a library for creating command line interfaces (CLIs) from absolutely any Python object.,https://github.com/google/python-fire/blob/master/doc/guide.md,True,True,False,False,False,True,True,False,True,True,False
+fire,,False,,0.7.1,,,Python Fire is a library for creating command line interfaces (CLIs) from absolutely any Python object.,https://github.com/google/python-fire/blob/master/doc/guide.md,True,True,False,False,False,True,True,False,True,True,False
 flake8,,True,,7.3.0,,,Your Tool For Style Guide Enforcement,http://flake8.pycqa.org/,True,True,True,False,True,True,True,False,True,True,False
 flake8-pyi,,True,,25.5.0,,,A plugin for flake8 to enable linting .pyi files.,,True,True,True,False,True,True,True,True,False,True,False
 flatten-dict,,True,,0.4.2,,,A flexible utility for flattening and unflattening dict-like objects in Python.,,True,False,False,False,False,True,False,False,False,False,False
@@ -82,29 +82,29 @@ intel-openmp,,False,,2025.2.0,numba,,Intel® oneAPI Compiler OpenMP runtime,http
 ipykernel,,False,,7.0.0a2,,,IPython Kernel for Jupyter,https://ipykernel.readthedocs.io,True,True,True,False,True,True,True,True,True,True,False
 ipympl,,False,,0.9.7,,,Matplotlib Jupyter Extension,,True,True,False,False,False,True,True,False,True,True,False
 ipyparallel,,False,,9.0.1,,,Interactive Parallel Computing with IPython,https://ipyparallel.readthedocs.io/,True,True,True,False,True,True,True,True,True,True,False
-ipython,,False,,9.4.0,numba,,IPython: Productive Interactive Computing,https://ipython.readthedocs.io/,True,True,True,False,True,True,True,True,True,True,False
+ipython,,False,,9.5.0,numba,,IPython: Productive Interactive Computing,https://ipython.readthedocs.io/,True,True,True,False,True,True,True,True,True,True,False
 ipywidgets,,False,,8.1.7,,,Jupyter Interactive Widgets,https://ipywidgets.readthedocs.io/en/latest/,True,True,False,False,False,True,True,False,True,True,False
 jinja2,,False,,3.1.6,pandas/numba,,A very fast and expressive template engine.,http://jinja.pocoo.org/docs/dev/,True,True,False,False,False,True,True,False,True,True,False
-joblib,,False,,1.5.1,statsmodels,,Lightweight pipelining: using Python functions as pipeline jobs.,,True,True,False,False,False,True,True,False,True,True,False
+joblib,,False,,1.5.2,statsmodels,,Lightweight pipelining: using Python functions as pipeline jobs.,,True,True,False,False,False,True,True,False,True,True,False
 johnnydep,,False,,1.20.5,,,Display dependency tree of Python distribution,,True,False,False,False,False,True,False,False,False,False,False
 jplephem,,False,,2.23,astropy,,"Python version of NASA DE4xx ephemerides, the basis for the Astronomical Alamanac",,True,True,False,False,False,True,True,False,True,True,False
 jupytext,,False,,master,,,"Jupyter notebooks as Markdown documents, Julia, Python or R scripts",https://github.com/mwouts/jupytext/blob/master/README.md,False,False,False,False,False,True,False,False,False,False,False
 kml2geojson,,False,,5.1.0,,,A Python library to covert KML files to GeoJSON files,,True,False,False,False,False,True,False,False,False,False,False
 libsharp,,True,,1.0.0,,,"Library for fast spherical harmonic transforms, see http://arxiv.org/abs/1303.4945",,True,True,False,False,False,False,True,False,False,False,False
 line_profiler,,True,,5.0.0,,,A module for monitoring memory usage of a python program,https://github.com/pyutils/line_profiler,True,True,True,False,True,False,True,True,True,True,False
-llvm-openmp,,False,,20.1.8,numba,,The OpenMP API supports multi-platform shared-memory parallel programming in C/C++ and Fortran.,,False,True,True,False,True,False,True,True,False,True,False
+llvm-openmp,,False,,21.1.0,numba,,The OpenMP API supports multi-platform shared-memory parallel programming in C/C++ and Fortran.,,False,True,True,False,True,False,True,True,False,True,False
 lxml,,False,,6.0.1,pandas/networkx,,Pythonic binding for the C libraries libxml2 and libxslt.,http://lxml.de/index.html#documentation,True,True,True,False,True,False,True,True,True,True,False
 make_arq,,True,,0.1,,,A tool for generating Sony A7RIII/IV and Fujifilm GFX 100 Pixel-Shift files.,,True,True,True,False,True,False,True,False,False,True,False
 makefun,,False,,1.16.0,,,Small library to dynamically create python functions.,https://smarie.github.io/python-makefun,True,False,False,False,False,True,False,False,False,False,False
 mamba,,True,,2.3.2,,,"A fast drop-in alternative to conda, using libsolv for dependency resolution",https://mamba.readthedocs.io/,False,True,True,False,True,False,True,True,False,True,False
 map_parallel,,False,,0.2.0,,,A drop-in replacement of map/starmap but in parallel with different backends.,,True,False,False,False,False,True,False,False,False,False,False
-markdown,,True,,3.8.2,,,Python implementation of Markdown.,https://python-markdown.github.io/,True,True,False,False,False,True,True,False,True,True,False
+markdown,,True,,3.9,,,Python implementation of Markdown.,https://python-markdown.github.io/,True,True,False,False,False,True,True,False,True,True,False
 markdown2,,True,,2.5.4,,,A fast and complete Python implementation of Markdown,,True,True,False,False,False,True,True,False,True,True,False
-matplotlib,,False,,3.10.5,pandas/astropy/statsmodels,,Publication quality figures in Python,http://matplotlib.org/contents.html,True,True,True,False,True,False,True,True,True,True,False
+matplotlib,,False,,3.10.6,pandas/astropy/statsmodels,,Publication quality figures in Python,http://matplotlib.org/contents.html,True,True,True,False,True,False,True,True,True,True,False
 mkl,,False,,2025.2.0,numpy,,Intel® oneAPI Math Kernel Library runtime libraries,https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl.html,False,True,False,False,False,False,True,False,False,True,False
 mpmath,,False,,1.3.0,astropy,,Python library for arbitrary-precision floating-point arithmetic,http://mpmath.org/doc/current/,True,True,False,False,False,True,True,False,True,True,False
 multipledispatch,,True,,0.6.0,,,Multiple dispatch,https://multiple-dispatch.readthedocs.io,True,True,False,False,False,True,True,False,True,True,False
-mypy,,False,,1.17.1,,,Optional static typing for Python,http://mypy.readthedocs.io,True,True,True,False,True,True,True,True,True,True,False
+mypy,,False,,1.18.1,,,Optional static typing for Python,http://mypy.readthedocs.io,True,True,True,False,True,True,True,True,True,True,False
 nbconvert,,False,,7.16.6,,,Converting Jupyter Notebooks,https://nbconvert.readthedocs.org/,True,True,True,False,True,True,True,True,True,True,False
 nbsphinx,,False,,0.9.7,,,Jupyter Notebook Tools for Sphinx,,True,True,False,False,False,True,True,False,True,True,False
 networkx,,False,,3.5,bokeh,https://networkx.org/documentation/stable/install.html#extra-packages,Python package for creating and manipulating complex networks,http://networkx.github.io/documentation.html,True,True,False,False,False,True,True,False,True,True,False
@@ -113,8 +113,8 @@ nltk,,True,,3.9.1,,,Natural Language Toolkit,http://www.nltk.org/,True,True,Fals
 nose,,True,,1.3.7,,,Nose extends unittest to make testing easier,,True,True,True,False,True,True,True,False,True,True,False
 numba,,False,,0.61.2,pandas,https://numba.pydata.org/numba-doc/latest/user/installing.html#dependency-list,NumPy aware dynamic Python compiler using LLVM,http://numba.pydata.org/,True,True,True,False,True,False,True,True,False,True,False
 numba_quaternion,,True,,0.2.0,,,Some convenience functions for Cosmology-related analysis.,,True,False,False,False,False,True,False,False,False,False,False
-numexpr,,False,,2.10.2,pandas,,Fast numerical expression evaluator for NumPy.,https://github.com/pydata/numexpr/wiki/Numexpr-Users-Guide,True,True,True,False,True,False,True,True,True,True,False
-numpy,,False,,2.3.2,,https://numpy.org/install/#numpy-packages--accelerated-linear-algebra-libraries,The fundamental package for scientific computing with Python.,https://numpy.org/doc/stable/,True,True,True,False,True,False,True,True,False,True,False
+numexpr,,False,,2.12.1,pandas,,Fast numerical expression evaluator for NumPy.,https://github.com/pydata/numexpr/wiki/Numexpr-Users-Guide,True,True,True,False,True,False,True,True,True,True,False
+numpy,,False,,2.3.3,,https://numpy.org/install/#numpy-packages--accelerated-linear-algebra-libraries,The fundamental package for scientific computing with Python.,https://numpy.org/doc/stable/,True,True,True,False,True,False,True,True,False,True,False
 odfpy,,False,,1.4.1,pandas,,Python API and tools to manipulate OpenDocument files,,True,True,False,False,False,True,True,False,True,True,False
 opencv,,True,,4.12.0,,,Computer vision and machine learning software library.,https://docs.opencv.org/4.x/,True,True,True,False,True,False,True,True,True,True,False
 openpyxl,,False,,3.1.5,pandas,,A Python library to read/write Excel 2010 xlsx/xlsm files,https://openpyxl.readthedocs.io/en/stable/,True,True,True,False,True,True,True,True,True,True,False
@@ -122,13 +122,13 @@ oyaml,,False,,1.0,,,Ordered YAML: drop-in replacement for PyYAML which preserves
 palettable,,False,,3.3.3,,,Color palettes for Python,,True,True,False,False,False,True,True,False,True,True,False
 pancritic,,True,,0.3.2,,,CriticMarkdup parser with optional pandoc backend,,True,False,False,False,False,True,False,False,False,False,False
 pandas,,False,,2.3.2,astropy,https://pandas.pydata.org/docs/getting_started/install.html#optional-dependencies,"Powerful data structures for data analysis, time series, and statistics",https://pandas.pydata.org/docs/,True,True,True,False,True,False,True,True,True,True,False
-pandoc,,True,,3.7.0.2,,,The universal markup converter,http://pandoc.org/MANUAL.html,False,True,True,False,False,False,True,True,True,True,False
+pandoc,,True,,3.8,,,The universal markup converter,http://pandoc.org/MANUAL.html,False,True,True,False,False,False,True,True,True,True,False
 pandoc-crossref,,True,,0.3.20,,,Pandoc filter for cross-references,https://lierdakil.github.io/pandoc-crossref/,False,True,False,False,False,False,True,True,False,True,False
 pandocfilters,,True,,1.5.0,,,A python module for writing pandoc filters,,True,True,False,False,False,True,True,False,True,True,False
 panflute,,True,,2.1.3,,,Pythonic Pandoc filters,http://scorreia.com/software/panflute/,True,False,False,False,False,True,False,False,False,False,False
 pannb,,True,,0.1.3,,,pannb—pandoc filter for ipynb,https://ickc.github.io/pannb/,True,False,False,False,False,True,False,False,False,False,False
 pantable,,True,,0.14.2,,,A Python library for writing pandoc filters for tables with batteries included.,https://ickc.github.io/pantable/,True,False,False,False,False,True,False,False,False,False,False
-parsl,,False,,2025.8.25,,,Simple parallel workflows system for Python,https://parsl.readthedocs.io/,True,False,False,False,False,True,False,False,False,False,False
+parsl,,False,,2025.9.8,,,Simple parallel workflows system for Python,https://parsl.readthedocs.io/,True,False,False,False,False,True,False,False,False,False,False
 pickle-compat,,True,,2.1.0,,,Python 2/3 compatibility layer for Pickle,,True,False,False,False,False,True,False,False,False,False,False
 pickleshare,,True,,0.7.5,,,Tiny 'shelve'-like database with concurrency support,,True,True,True,False,True,True,True,False,True,True,False
 pillow,,False,,11.3.0,,,Pillow is the friendly PIL fork by Alex Clark and Contributors,,True,True,True,False,True,False,True,True,True,True,False
@@ -144,7 +144,7 @@ pyarrow,,False,,21.0.0,pandas/astropy,,Python libraries for Apache Arrow with de
 pycodestyle,,True,,2.14.0,,,Python style guide checker,https://pycodestyle.readthedocs.io/,True,True,False,False,False,True,True,False,True,True,False
 pydocstyle,,True,,6.3.0,,,Python docstring style checker (formerly pep257),http://pydocstyle.readthedocs.org,True,True,False,False,False,True,True,False,True,True,False
 pydot,,False,,4.0.1,networkx,,Python interface to Graphviz's Dot,https://pypi.python.org/pypi/pydot,True,True,True,False,True,True,True,True,False,True,False
-pygithub,,True,,2.7.0,,,Python library implementing the GitHub API v3,http://pygithub.github.io/PyGithub,True,True,True,False,True,True,True,False,True,True,False
+pygithub,,True,,2.8.1,,,Python library implementing the GitHub API v3,http://pygithub.github.io/PyGithub,True,True,True,False,True,True,True,False,True,True,False
 pygments,,False,,2.19.2,numba,,"Pygments is a generic syntax highlighter suitable for use in code hosting, forums, wikis or other applications that need to prettify source code.",,True,True,False,False,False,True,True,False,True,True,False
 pygraphviz,,False,,1.14,networkx,,Python interface to Graphviz,https://graphviz.readthedocs.io,True,True,True,False,True,False,True,True,False,True,False
 pylint,,False,,3.3.8,,,python code static checker,https://pylint.readthedocs.io/en/latest/,True,True,True,False,True,True,True,True,True,True,False
@@ -159,19 +159,19 @@ pyrss2gen,,False,,1.1,,,Generate RSS2 using a Python data structure,,True,False,
 pyslalib,,True,,1.0.4,,,f2py and numpy based wrappers for SLALIB,,True,True,True,False,True,False,True,False,False,False,False
 pysm3,,False,,3.4.2,,,Python Sky Model for Microwave and Submm experiments,https://pysm3.readthedocs.io/,True,False,False,False,False,True,False,False,False,False,False
 pytables,,False,,3.10.2,pandas,,"Brings together Python, HDF5 and NumPy to easily handle large amounts of data.",http://www.pytables.org/,True,True,True,False,True,False,True,True,True,True,False
-pytest,,False,,8.4.1,,,Simple and powerful testing with Python.,https://docs.pytest.org/en/latest/,True,True,True,False,True,True,True,True,True,True,False
-pytest-cov,,False,,6.2.1,,,Pytest plugin for measuring coverage,,True,True,False,False,False,True,True,False,True,True,False
+pytest,,False,,8.4.2,,,Simple and powerful testing with Python.,https://docs.pytest.org/en/latest/,True,True,True,False,True,True,True,True,True,True,False
+pytest-cov,,False,,7.0.0,,,Pytest plugin for measuring coverage,,True,True,False,False,False,True,True,False,True,True,False
 pytest-mpi,,False,,0.6,,,Pytest plugin for working with MPI,https://pytest-mpi.readthedocs.io/,True,False,False,False,False,True,False,False,False,False,False
 pytest-parallel,,False,,0.1.1,,,a pytest plugin for parallel and concurrent testing,,True,False,False,False,False,True,False,False,False,False,False
 pytest-xdist,,False,,3.8.0,,,py.test xdist plugin for distributed testing and loop-on-failing modes,,True,True,False,False,False,True,True,False,True,True,False
-python-calamine,,False,,0.4.0,pandas,,Python binding for Rust's library for reading excel and odf file - calamine.,,True,True,True,False,True,False,True,True,False,True,False
+python-calamine,,False,,0.5.3,pandas,,Python binding for Rust's library for reading excel and odf file - calamine.,,True,True,True,False,True,False,True,True,False,True,False
 python-cufflinks,,True,,0.17.3,,,Productivity Tools for Plotly + Pandas,,True,False,False,False,False,True,False,False,False,False,False
 python-slugify,,True,,8.0.4,,,A Python Slugify application that handles Unicode,,True,True,False,False,False,True,True,False,True,True,False
 pytz,,False,,2025.2,astropy,,"World timezone definitions, modern and historical.",http://pythonhosted.org/pytz/,True,True,False,False,False,True,True,False,True,True,False
 pyxlsb,,False,,1.0.10,pandas,,Excel 2007-2010 Binary Workbook (xlsb) parser,,True,False,False,False,False,True,False,False,False,False,False
 pyyaml,,False,,6.0.2,numba,,YAML parser and emitter for Python,http://pyyaml.org/wiki/PyYAML,True,True,True,False,True,True,True,True,True,True,False
 qrcode,,True,,8.2,,,QR Code image generator,,True,True,False,False,False,True,True,False,True,True,False
-quaternion,,False,,2024.0.10,,,Add built-in support for quaternions to numpy,https://github.com/moble/quaternion#usage,True,True,True,False,True,False,True,True,False,True,False
+quaternion,,False,,2024.0.12,,,Add built-in support for quaternions to numpy,https://github.com/moble/quaternion#usage,True,True,True,False,True,False,True,True,False,True,False
 quaternionarray,,True,,0.6.2,,,Python package for fast quaternion arrays math,,True,False,False,False,False,True,False,False,False,False,False
 readability-lxml,,False,,0.8.1,,,fast html to text parser (article readability tool) with python 3 support,,True,False,False,False,False,True,False,False,False,False,False
 removestar,,True,,1.5.2,,,removestar is a tool to automatically replace 'import *' in Python files with explicit imports.,https://asmeurer.com/removestar,True,False,False,False,False,True,False,False,False,False,False
@@ -180,11 +180,11 @@ requests-futures,,False,,1.0.2,,,Asynchronous Python HTTP for Humans.,,True,True
 requests-oauthlib,,False,,2.0.0,,,OAuthlib authentication support for Requests.,https://github.com/requests/requests-oauthlib,True,True,False,False,False,True,True,False,True,True,False
 routingpy,,True,,0.3.3,,,"Python library to access all public routing, isochrones and matrix APIs in a consistent manner.",,True,False,False,False,False,True,False,False,False,False,False
 ruamel.yaml,,False,,0.18.15,,,A YAML package for Python. It is a derivative of Kirill Simonov's PyYAML 3.11 which supports YAML1.1,,True,True,True,False,True,False,True,True,True,True,False
-ruff,,False,,0.12.10,,,"An extremely fast Python linter, written in Rust.",,True,True,True,False,True,False,True,True,False,True,False
+ruff,,False,,0.13.0,,,"An extremely fast Python linter, written in Rust.",,True,True,True,False,True,False,True,True,False,True,False
 schema,,False,,0.7.7,,,Schema validation just got Pythonic,,True,False,False,False,False,True,False,False,False,False,False
 scikit-image,,True,,0.25.2,,,Image processing in Python.,https://scikit-image.org/docs/stable/,True,True,True,False,True,False,True,True,True,True,False
-scikit-learn,,True,,1.7.1,,,A set of python modules for machine learning and data mining,,True,True,True,False,True,False,True,True,False,True,False
-scipy,,False,,1.16.1,pandas/numba/astropy/seaborn,,Scientific Library for Python,http://www.scipy.org/docs.html,True,True,True,False,True,False,True,True,True,True,False
+scikit-learn,,True,,1.7.2,,,A set of python modules for machine learning and data mining,,True,True,True,False,True,False,True,True,False,True,False
+scipy,,False,,1.16.2,pandas/numba/astropy/seaborn,,Scientific Library for Python,http://www.scipy.org/docs.html,True,True,True,False,True,False,True,True,True,True,False
 seaborn,,False,,0.13.2,,https://seaborn.pydata.org/installing.html#optional-dependencies,Statistical data visualization,https://seaborn.pydata.org,False,True,False,False,False,True,True,False,True,True,False
 setuptools,,False,,80.9.0,astropy/numba,,"Download, build, install, upgrade, and uninstall Python packages",http://pythonhosted.org/setuptools/,True,True,True,False,True,True,True,True,True,True,False
 snakeviz,,True,,2.2.2,,,An in-browser Python profile viewer,https://jiffyclub.github.io/snakeviz,True,False,False,False,False,True,False,False,False,False,False
@@ -204,9 +204,9 @@ terminaltables,,True,,3.1.10,,,Generate simple tables in terminals from a nested
 tikzplotlib,,False,,0.10.1,,,Convert matplotlib figures into TikZ/PGFPlots,,True,False,False,False,False,True,False,False,False,False,False
 toast,,True,,2.3.14,,,Time Ordered Astrophysics Scalable Tools,,True,True,False,False,False,False,True,False,False,False,False
 toml,,False,,0.10.2,,,Python lib for TOML.,,True,True,False,False,False,True,False,False,True,True,False
-tox,,True,,4.28.4,,,virtualenv-based automation of test activities,https://tox.readthedocs.org/,True,True,True,False,True,True,True,True,True,True,False
+tox,,True,,4.30.2,,,virtualenv-based automation of test activities,https://tox.readthedocs.org/,True,True,True,False,True,True,True,True,True,True,False
 tox-conda,,True,,0.10.2,,,tox plugin that provides integration with conda,https://github.com/tox-dev/tox-conda,True,False,False,False,False,True,False,False,False,False,False
-twine,,True,,6.1.0,,,Collection of utilities for interacting with PyPI,https://twine.readthedocs.io,True,True,False,False,False,True,True,True,True,True,False
+twine,,True,,6.2.0,,,Collection of utilities for interacting with PyPI,https://twine.readthedocs.io,True,True,False,False,False,True,True,True,True,True,False
 typeguard,,False,,4.4.4,numba,,Runtime type checker for Python,https://github.com/agronholm/typeguard,True,False,False,False,False,True,False,False,False,False,False
 types-pyyaml,,False,,6.0.12.20250822,,,Typing stubs for PyYAML,,True,False,False,False,False,True,False,False,False,False,False
 tzwhere,,False,,3.0.3,,,Python library to look up timezone from lat / long offline,,True,False,False,False,False,True,False,False,False,False,False
@@ -216,12 +216,12 @@ urlpath,,False,,1.2.0,,,Object-oriented URL from `urllib.parse` and `pathlib`,,T
 watchdog,,False,,6.0.0,,,Filesystem events monitoring,http://pythonhosted.org/watchdog,True,True,True,False,True,True,True,True,True,True,False
 wheel,,False,,0.45.1,,,A built-package format for Python.,,True,True,True,False,True,True,True,False,True,True,False
 wolframclient,,False,,1.1.7,,,A Python library with various tools to interact with the Wolfram Language and the Wolfram Cloud.,https://wolfr.am/wolframclientdoc,True,False,False,False,False,True,False,False,False,False,False
-xarray,,False,,2025.8.0,pandas,,N-D labeled arrays and datasets in Python.,,True,True,False,False,False,True,True,False,True,True,False
+xarray,,False,,2025.9.0,pandas,,N-D labeled arrays and datasets in Python.,,True,True,False,False,False,True,True,False,True,True,False
 xlrd,,False,,2.0.2,pandas,,Library for developers to extract data from Microsoft Excel (tm) spreadsheet files,http://xlrd.readthedocs.io/en/stable/,True,True,False,False,False,True,True,False,True,True,False
-xlsxwriter,,False,,3.2.5,pandas,,A Python module for creating Excel XLSX files,https://xlsxwriter.readthedocs.org/,True,True,False,False,False,True,True,False,True,True,False
-xmltodict,,False,,0.14.2,,,Makes working with XML feel like you are working with JSON,,True,True,False,False,False,True,True,False,True,True,False
+xlsxwriter,,False,,3.2.6,pandas,,A Python module for creating Excel XLSX files,https://xlsxwriter.readthedocs.org/,True,True,False,False,False,True,True,False,True,True,False
+xmltodict,,False,,1.0.0,,,Makes working with XML feel like you are working with JSON,,True,True,False,False,False,True,True,False,True,True,False
 yaml2cli,,True,,1.0.3,,,Script Generator that organizes cli args by YAML,,True,False,False,False,False,True,False,False,False,False,False
 yamlloader,,False,,1.5.2,,,Loaders and dumpers for PyYAML,,True,False,False,False,False,True,False,False,False,False,False
 zeep,,True,,4.3.1,,,A fast and modern Python SOAP client,http://docs.python-zeep.org/,True,True,False,False,False,True,True,False,True,True,False
 zlib,,False,,1.3.1,pandas,,Massively spiffy yet delicately unobtrusive compression library,http://zlib.net/manual.html,False,True,True,True,True,False,True,True,True,True,True
-zstandard,,False,,0.23.0,pandas,,Zstandard bindings for Python,https://github.com/indygreg/python-zstandard/blob/master/README.rst#python-zstandard,True,True,True,False,True,False,True,True,True,True,False
+zstandard,,False,,0.24.0,pandas,,Zstandard bindings for Python,https://github.com/indygreg/python-zstandard/blob/master/README.rst#python-zstandard,True,True,True,False,True,False,True,True,True,True,False
