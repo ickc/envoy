@@ -112,9 +112,11 @@ def read_environment_systemPackages(
 ) -> list[str]:
     """Read environment.systemPackages from flake.nix.
 
-    Read the lines between these 2 lines:
+    Read the lines between these:
 
-        environment.systemPackages = with pkgs; [
+        with pkgs;
+        [
+        ...
         ];
     """
     with path.open("r", encoding="utf-8") as f:
@@ -124,9 +126,9 @@ def read_environment_systemPackages(
     end_index = -1
 
     for i, line in enumerate(lines):
-        if line.strip() == "environment.systemPackages = with pkgs; [":
-            start_index = i + 1
-        elif start_index != -1 and line.strip() == "];":
+        if line.strip() == "with pkgs;":
+            start_index = i + 2
+        elif start_index != -1 and line.strip().startswith("]"):
             end_index = i
             break
 
