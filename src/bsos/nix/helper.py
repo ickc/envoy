@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
+import json
 import re
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
@@ -107,6 +109,29 @@ def parse_nix_paths(
     return df
 
 
+def get_package_descriptions() -> dict[str, str]:
+    """Get a mapping of package names to their descriptions from nix."""
+    try:
+        result = subprocess.run(
+            ["nix", "search", "--json", "nixpkgs", ".*"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+        packages = json.loads(result.stdout)
+        descriptions = {}
+        for _, pkg_info in packages.items():
+            pname = pkg_info.get("pname")
+            version = pkg_info.get("version")
+            description = pkg_info.get("description", None)
+            if pname and version and description:
+                descriptions[pname] = description
+        return descriptions
+    except (subprocess.CalledProcessError, FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"Warning: Could not fetch package descriptions: {e}")
+        return {}
+
+
 def read_environment_systemPackages(
     path: Path = Path("flake.nix"),
 ) -> list[str]:
@@ -170,14 +195,22 @@ def package2command(
         for i in sorted(no_bin):
             print(f"\t{i}")
 
-    res = defaultdict(list)
+    descriptions = get_package_descriptions()
+    res = defaultdict(lambda: {"command": []})
     for name, row in df.iterrows():
-        # if row.install in packages:
-        res[row.install].append(name)
-        # else:
-        #     print(f"Ignored: {row.install}\t{name}")
+        res[row.install]["command"].append(name)
+
     # sort dict and its values
-    res = {k: {"command": sorted(v)} for k, v in sorted(res.items())}
+    sorted_res = {}
+    for k, v in sorted(res.items()):
+        temp = {
+            "command": sorted(v["command"]),
+        }
+        desc = descriptions.get(k, None)
+        if desc:
+            temp["description"] = desc
+        sorted_res[k] = temp
+    res = sorted_res
     with path.open("w", encoding="utf-8") as f:
         yaml.dump(res, f, Dumper=yamlloader.ordereddict.CSafeDumper)
 
