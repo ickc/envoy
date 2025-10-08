@@ -118,7 +118,7 @@ def _format_block(name: str, description: Optional[str]) -> List[str]:
     return [f"  # {desc_text}\n", f'  "{name}"\n'] if desc_text else [f'  "{name}"\n']
 
 
-def add_description(path: Path, *, cask: bool = False) -> None:
+def add_description(path: Path, *, cask: bool = False, sort: bool = False) -> None:
     """Read a nix brews list at `path`, annotate each formula with brew descs, and write it back.
 
     Args:
@@ -156,7 +156,8 @@ def add_description(path: Path, *, cask: bool = False) -> None:
     # Parse package names from the original content between the brackets.
     inner_original = lines[open_idx + 1 : close_idx]
     names = _parse_brew_names(inner_original)
-    names.sort()
+    if sort:
+        names.sort()
 
     # Build the new inner block
     new_inner: List[str] = []
