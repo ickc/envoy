@@ -153,3 +153,5 @@ nix-command2package = { cmd = "python -m bsos.nix.helper command2package nix/com
 nix-package2command = { cmd = "python -m bsos.nix.helper package2command nix/package2command.yml --flake-path nix/modules/systemPackages.nix", description = "Write the package to command mapping to a file." }
 
 nix-format = { cmd = "find nix -name '*.nix' -exec nixfmt '{}' +", description = "Format all nix files in the project" }
+
+brew-add-description = { cmd = "python -m bsos.brew.helper add-description nix/modules/darwin/brews.nix", description = "Annotate a brews.nix file with brew descriptions." }
