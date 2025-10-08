@@ -177,7 +177,7 @@ def package2command(
         # else:
         #     print(f"Ignored: {row.install}\t{name}")
     # sort dict and its values
-    res = {k: sorted(v) for k, v in sorted(res.items())}
+    res = {k: {"command": sorted(v)} for k, v in sorted(res.items())}
     with path.open("w", encoding="utf-8") as f:
         yaml.dump(res, f, Dumper=yamlloader.ordereddict.CSafeDumper)
 
