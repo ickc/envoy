@@ -371,7 +371,7 @@ packages:
 - pypi: .
   name: bsos
   version: 0.1.0
-  sha256: c941ee8d27fefe5a3c5c33a5f134daa066b0f7608e76be7b4af5791d544d4aaf
+  sha256: d84389bf1cd8303edb674e2ada4a3a2b58d9a5e1aabaa8c3702d7b68e9eea772
   requires_dist:
   - coloredlogs>=14,<16 ; extra == 'extras'
   - defopt>=6,<7
