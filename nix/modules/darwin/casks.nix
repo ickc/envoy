@@ -50,8 +50,8 @@
   "font-doulos-sil"
   "font-et-book"
   "font-ezra-sil"
-  "font-fira-code-nerd-font"
   "font-fira-code"
+  "font-fira-code-nerd-font"
   "font-fira-mono"
   "font-fira-sans"
   "font-fontawesome"
@@ -60,8 +60,8 @@
   "font-hanamin"
   "font-hasklug-nerd-font"
   "font-jetbrains-mono-nerd-font"
-  "font-latin-modern-math"
   "font-latin-modern"
+  "font-latin-modern-math"
   "font-noto-sans-cjk"
   "font-noto-serif-cjk"
   "font-scheherazade"
@@ -69,17 +69,17 @@
   "font-source-sans-3"
   "font-source-serif-4"
   "font-tex-gyre-adventor"
-  "font-tex-gyre-bonum-math"
   "font-tex-gyre-bonum"
+  "font-tex-gyre-bonum-math"
   "font-tex-gyre-chorus"
   "font-tex-gyre-cursor"
   "font-tex-gyre-heros"
-  "font-tex-gyre-pagella-math"
   "font-tex-gyre-pagella"
-  "font-tex-gyre-schola-math"
+  "font-tex-gyre-pagella-math"
   "font-tex-gyre-schola"
-  "font-tex-gyre-termes-math"
+  "font-tex-gyre-schola-math"
   "font-tex-gyre-termes"
+  "font-tex-gyre-termes-math"
   # Terminal emulator that uses platform-native UI and GPU acceleration
   "ghostty"
   # Free and open-source image editor
@@ -146,10 +146,10 @@
   "namechanger"
   # Allows video downloads from the Web
   "netdownloadhelpercoapp"
-  # Calendar for professionals and teams
-  "notion-calendar"
   # App to write, plan, collaborate, and get organised
   "notion"
+  # Calendar for professionals and teams
+  "notion-calendar"
   # Knowledge base that works on top of a local folder of plain text Markdown files
   "obsidian"
   # Environment for statistical computing and graphics
