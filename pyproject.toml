@@ -145,3 +145,11 @@ conda-update = { depends-on = [{ task = "conda-clean"}, { task = "conda-generate
 
 # misc
 conda-list-depended = { cmd = "tail -n +2 conda/conda.csv | cut -d, -f6 | tr '/' '\n' | sort -u", description = "List all depended packages in conda/conda.csv" }
+
+nix-mas-update = { cmd = "python -m bsos.nix.mas nix/modules/darwin/masApps.nix", description = "List all installed apps from the Mac App Store in nix flake format." }
+
+nix-command2package = { cmd = "python -m bsos.nix.helper command2package nix/command2package.csv", description = "Write the command to package mapping to a file." }
+
+nix-package2command = { cmd = "python -m bsos.nix.helper package2command nix/package2command.yml --flake-path nix/modules/systemPackages.nix", description = "Write the package to command mapping to a file." }
+
+nix-format = { cmd = "find nix -name '*.nix' -exec nixfmt '{}' +", description = "Format all nix files in the project" }
