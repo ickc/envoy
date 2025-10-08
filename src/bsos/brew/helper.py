@@ -65,11 +65,14 @@ def _parse_brew_names(lines: List[str]) -> List[str]:
     return names
 
 
-def _call_brew_info(name: str) -> Optional[Dict]:
+def _call_brew_info(name: str, cask: bool = False) -> Optional[Dict]:
     """Run `brew info <name> --json=v2` and return parsed JSON or None on failure."""
+    command = ["brew", "info", name, "--json=v2"]
+    if cask:
+        command.insert(2, "--cask")
     try:
         proc = subprocess.run(
-            ["brew", "info", name, "--json=v2"],
+            command,
             capture_output=True,
             text=True,
             check=False,
@@ -87,15 +90,16 @@ def _call_brew_info(name: str) -> Optional[Dict]:
         return None
 
 
-def _extract_description(brew_json: Optional[Dict]) -> Optional[str]:
+def _extract_description(brew_json: Optional[Dict], cask: bool = False) -> Optional[str]:
     """Extract `formulae[0]['desc']` from brew JSON if present."""
+    key = "casks" if cask else "formulae"
     if not brew_json:
         return None
     try:
-        formulae = brew_json.get("formulae")
-        if not isinstance(formulae, list) or not formulae:
+        package = brew_json.get(key)
+        if not isinstance(package, list) or not package:
             return None
-        desc = formulae[0].get("desc")
+        desc = package[0].get("desc")
         if isinstance(desc, str):
             return desc.strip()
     except Exception:
@@ -111,10 +115,10 @@ def _format_block(name: str, description: Optional[str]) -> List[str]:
     desc_text = description or ""
     # Ensure description does not contain newline characters that would break layout.
     desc_text = desc_text.splitlines()[0] if desc_text else ""
-    return [f"  # {desc_text}\n", f'  "{name}"\n']
+    return [f"  # {desc_text}\n", f'  "{name}"\n'] if desc_text else [f'  "{name}"\n']
 
 
-def add_description(path: Path) -> None:
+def add_description(path: Path, *, cask: bool = False) -> None:
     """Read a nix brews list at `path`, annotate each formula with brew descs, and write it back.
 
     Args:
@@ -152,12 +156,13 @@ def add_description(path: Path) -> None:
     # Parse package names from the original content between the brackets.
     inner_original = lines[open_idx + 1 : close_idx]
     names = _parse_brew_names(inner_original)
+    names.sort()
 
     # Build the new inner block
     new_inner: List[str] = []
     for name in names:
-        info = _call_brew_info(name)
-        desc = _extract_description(info)
+        info = _call_brew_info(name, cask=cask)
+        desc = _extract_description(info, cask=cask)
         new_inner.extend(_format_block(name, desc))
 
     # Ensure there's a newline before the closing bracket if the prefix did not
