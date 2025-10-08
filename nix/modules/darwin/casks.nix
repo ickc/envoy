@@ -94,7 +94,6 @@
   "notion-calendar"
   "notion"
   "obsidian"
-  # "onedrive"
   "r-app"
   "raindropio"
   "rectangle"
