@@ -39,6 +39,9 @@
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#simple
       darwinConfigurations."simple" = mkHost "default" "aarch64-darwin";
+      darwinConfigurations.ickc-mba = mkHost "default" "aarch64-darwin";
+      darwinConfigurations.ickc-mbp-m1p = mkHost "default" "aarch64-darwin";
+      darwinConfigurations.ickc-mbp-m4p = mkHost "default" "aarch64-darwin";
 
       # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations."simple".pkgs;
