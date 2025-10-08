@@ -28,20 +28,23 @@
     }:
     let
       mkHost =
-        hostName: system:
+        hostName: system: stateVersion:
         nix-darwin.lib.darwinSystem {
           inherit system;
           specialArgs = { inherit self inputs; };
-          modules = [ ./hosts/${hostName}.nix ];
+          modules = [
+            ./hosts/${hostName}.nix
+            { system.stateVersion = stateVersion; }
+          ];
         };
     in
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#simple
-      darwinConfigurations."simple" = mkHost "default" "aarch64-darwin";
-      darwinConfigurations.ickc-mba = mkHost "default" "aarch64-darwin";
-      darwinConfigurations.ickc-mbp-m1p = mkHost "default" "aarch64-darwin";
-      darwinConfigurations.ickc-mbp-m4p = mkHost "default" "aarch64-darwin";
+      darwinConfigurations."simple" = mkHost "default" "aarch64-darwin" 4;
+      darwinConfigurations.ickc-mba = mkHost "default" "aarch64-darwin" 4;
+      darwinConfigurations.ickc-mbp-m1p = mkHost "default" "aarch64-darwin" 4;
+      darwinConfigurations.ickc-mbp-m4p = mkHost "default" "aarch64-darwin" 5;
 
       # Expose the package set, including overlays, for convenience.
       darwinPackages = self.darwinConfigurations."simple".pkgs;
