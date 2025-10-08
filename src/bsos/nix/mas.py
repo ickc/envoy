@@ -48,9 +48,7 @@ def main(path: Path) -> None:
 
 def cli():
     """CLI entry point."""
-    parser = argparse.ArgumentParser(
-        description="Update flake.nix with the latest mas apps"
-    )
+    parser = argparse.ArgumentParser(description="Update flake.nix with the latest mas apps")
     parser.add_argument("path", type=Path, help="The path to the flake.nix file")
     args = parser.parse_args()
     main(args.path)
