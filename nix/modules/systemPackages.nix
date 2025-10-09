@@ -45,7 +45,7 @@ with pkgs;
   gnused
   gnutar
   go-task
-  gpsbabel
+  # gpsbabel
   graphviz
   gron
   gzip
@@ -59,7 +59,7 @@ with pkgs;
   jq
   less
   libarchive
-  libimobiledevice
+  # libimobiledevice
   librsvg
   lsd
   lux
@@ -73,7 +73,7 @@ with pkgs;
   nixfmt-rfc-style
   nmap
   onefetch
-  openai-whisper
+  # openai-whisper
   openai-whisper-cpp
   opencc
   pam-reattach
