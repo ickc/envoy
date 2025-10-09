@@ -24,6 +24,7 @@
   "Microsoft Outlook" = 985367838;
   "Microsoft PowerPoint" = 462062816;
   "Microsoft Word" = 462054704;
+  "Miofive" = 1546577146;
   "Motion" = 434290957;
   "MultiMarkdown Composer" = 1275176220;
   "Notability" = 360593530;
