@@ -45,8 +45,5 @@
       darwinConfigurations.ickc-mba = mkHost "default" "aarch64-darwin" 4;
       darwinConfigurations.ickc-mbp-m1p = mkHost "default" "aarch64-darwin" 4;
       darwinConfigurations.ickc-mbp-m4p = mkHost "default" "aarch64-darwin" 5;
-
-      # Expose the package set, including overlays, for convenience.
-      darwinPackages = self.darwinConfigurations."simple".pkgs;
     };
 }
