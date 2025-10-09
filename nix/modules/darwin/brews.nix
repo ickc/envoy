@@ -2,8 +2,6 @@
 # Declarative list of Homebrew formulae for nix-darwin `homebrew.brews`.
 # This file is imported from `flake.nix` (e.g. `brews = import ./brews.nix;`).
 [
-  # Automate deployment, configuration, and upgrading
-  "ansible"
   # Interact with Google Gemini AI models from the command-line
   "gemini-cli"
   # CLI for ImageOptim, ImageAlpha and JPEGmini
