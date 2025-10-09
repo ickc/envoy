@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin = {
       url = "github:LnL7/nix-darwin/nix-darwin-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -29,9 +30,15 @@
     let
       mkHost =
         hostName: system: stateVersion:
+        let
+          pkgs-unstable = import inputs.nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+        in
         nix-darwin.lib.darwinSystem {
           inherit system;
-          specialArgs = { inherit self inputs; };
+          specialArgs = { inherit self inputs pkgs-unstable; };
           modules = [
             ./hosts/${hostName}.nix
             { system.stateVersion = stateVersion; }

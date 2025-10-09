@@ -1,7 +1,7 @@
-{ pkgs, self, ... }:
+{ pkgs, pkgs-unstable, self, ... }:
 {
   # nixpkgs.config.allowUnfree = true;
-  environment.systemPackages = import ./systemPackages.nix { inherit pkgs; };
+  environment.systemPackages = import ./systemPackages.nix { inherit pkgs pkgs-unstable; };
   homebrew = {
     enable = true;
     onActivation.cleanup = "zap";

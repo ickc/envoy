@@ -2,9 +2,10 @@
 # $ nix-env -qaP | grep wget
 # Usage:
 #   environment.systemPackages = import ./packages.nix { inherit pkgs; };
-{ pkgs }:
+{ pkgs, pkgs-unstable }:
 with pkgs;
 [
+  pkgs-unstable.gemini-cli
   bashInteractive
   bat
   bat-extras.batdiff
