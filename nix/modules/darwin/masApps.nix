@@ -1,16 +1,12 @@
 {
   "1Blocker" = 1365531024;
-  "Aiko" = 1672085276;
   "Amphetamine" = 937984704;
   "Blackmagic Disk Speed Test" = 425264550;
   "Compressor" = 424390742;
-  "Copilot" = 6738511300;
-  "Deliveries" = 290986013;
   "Drafts" = 1435957248;
   "EasyRes" = 688211836;
   "Final Cut Pro" = 424389933;
   "forScore" = 363738376;
-  "FreeChat" = 6458534902;
   "GarageBand" = 682658836;
   "HACK" = 1464477788;
   "iThoughtsX" = 720669838;
@@ -31,29 +27,22 @@
   "Numbers" = 409203825;
   "OneDrive" = 823766827;
   "Pages" = 409201541;
-  "Perplexity" = 6714467650;
-  "Prime Video" = 545519333;
   "Rakuten Cash Back" = 1451893560;
   "Save to Raindrop.io" = 1549370672;
   "Slack" = 803453959;
   "SMARTReporter" = 509148961;
-  "Spark Desktop" = 6445813049;
   "Spark" = 1176895641;
   "Speedtest" = 1153157709;
   "Strongbox" = 897283731;
-  "Tabs Switcher" = 1406718335;
   "Tabs to Links" = 1451408472;
   "Tailscale" = 1475387142;
   "TaskPaper" = 1090940630;
   "The Camelizer" = 1532579087;
   "The Unarchiver" = 425424353;
-  "Toggl Track" = 1291898086;
-  "Trello" = 1278508951;
   "uBlacklist for Safari" = 1547912640;
   "URL Linker" = 1289119450;
   "Vinegar" = 1591303229;
   "Virtual Intranet Access" = 1439900554;
   "WhatsApp" = 310633997;
-  "Windows App" = 1295203466;
   "Xcode" = 497799835;
 }
