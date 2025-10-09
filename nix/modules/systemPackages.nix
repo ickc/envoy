@@ -8,7 +8,6 @@ with pkgs;
   pkgs-unstable.gemini-cli
   pkgs-unstable.llama-cpp
   pkgs-unstable.macmon
-  pkgs-unstable.mas
   pkgs-unstable.pandoc
   bashInteractive
   bat
