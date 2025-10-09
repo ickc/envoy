@@ -6,6 +6,7 @@
 with pkgs;
 [
   pkgs-unstable.gemini-cli
+  pkgs-unstable.llama-cpp
   bashInteractive
   bat
   bat-extras.batdiff
