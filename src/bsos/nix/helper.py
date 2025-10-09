@@ -109,7 +109,7 @@ def parse_nix_paths(
     return df
 
 
-def get_package_descriptions() -> dict[str, str]:
+def get_package_descriptions() -> dict[str, dict[str, str]]:
     """Get a mapping of package names to their descriptions from nix."""
     try:
         result = subprocess.run(
@@ -119,14 +119,8 @@ def get_package_descriptions() -> dict[str, str]:
             check=True,
         )
         packages = json.loads(result.stdout)
-        descriptions = {}
-        for _, pkg_info in packages.items():
-            pname = pkg_info.get("pname")
-            version = pkg_info.get("version")
-            description = pkg_info.get("description", None)
-            if pname and version and description:
-                descriptions[pname] = description
-        return descriptions
+        # It is currently expecting it to begin with legacyPackages.aarch64-darwin.
+        return {".".join(key.split(".")[2:]): value for key, value in packages.items()}
     except (subprocess.CalledProcessError, FileNotFoundError, json.JSONDecodeError) as e:
         print(f"Warning: Could not fetch package descriptions: {e}")
         return {}
@@ -208,7 +202,7 @@ def package2command(
         }
         desc = descriptions.get(k, None)
         if desc:
-            temp["description"] = desc
+            temp |= desc
         sorted_res[k] = temp
     res = sorted_res
     with path.open("w", encoding="utf-8") as f:
