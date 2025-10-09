@@ -8,6 +8,7 @@ with pkgs;
   pkgs-unstable.gemini-cli
   pkgs-unstable.llama-cpp
   pkgs-unstable.macmon
+  pkgs-unstable.mas
   bashInteractive
   bat
   bat-extras.batdiff
@@ -67,7 +68,6 @@ with pkgs;
   lsd
   lux
   mactop
-  mas
   mediainfo
   mediainfo-gui
   mermaid-cli
