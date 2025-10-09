@@ -126,6 +126,17 @@ def get_package_descriptions() -> dict[str, dict[str, str]]:
         return {}
 
 
+def get_nix_package_meta(name: str) -> dict:
+    """Evaluate and return the Nix package meta as a dict.
+
+    Runs:
+        nix eval --json f'nixpkgs#{name}.meta'
+    """
+    cmd = ["nix", "eval", "--json", f"nixpkgs#{name}.meta"]
+    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+    return json.loads(result.stdout)
+
+
 def read_environment_systemPackages(
     path: Path = Path("flake.nix"),
 ) -> list[str]:
@@ -165,6 +176,15 @@ def command2package(
     """Write the command to package mapping to a file."""
     df = parse_nix_paths(nix_bin_dir)
     df.to_csv(path)
+
+
+def check_package_supported(
+    flake_path: Path,
+) -> None:
+    packages = (p for p in read_environment_systemPackages(flake_path) if not p.startswith("#"))
+    for package in packages:
+        if get_nix_package_meta(package)["unsupported"]:
+            print(package)
 
 
 def package2command(
@@ -210,7 +230,7 @@ def package2command(
 
 
 def cli() -> None:
-    defopt.run([command2package, package2command])
+    defopt.run([command2package, package2command, check_package_supported])
 
 
 if __name__ == "__main__":
