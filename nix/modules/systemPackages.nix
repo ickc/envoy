@@ -30,7 +30,6 @@ with pkgs;
   exiftool
   f3
   fastfetch
-  fastgron
   fd
   ffmpeg_7
   file
@@ -48,6 +47,7 @@ with pkgs;
   go-task
   gpsbabel
   graphviz
+  gron
   gzip
   html-tidy
   htop
