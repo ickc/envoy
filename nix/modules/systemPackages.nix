@@ -7,6 +7,7 @@ with pkgs;
 [
   pkgs-unstable.gemini-cli
   pkgs-unstable.llama-cpp
+  pkgs-unstable.macmon
   bashInteractive
   bat
   bat-extras.batdiff
@@ -68,6 +69,7 @@ with pkgs;
   mactop
   mediainfo
   mediainfo-gui
+  mermaid-cli
   minify
   mosh
   nano
@@ -97,6 +99,7 @@ with pkgs;
   tmux
   tokei
   units
+  verapdf
   w3m
   wakeonlan
   wdiff
