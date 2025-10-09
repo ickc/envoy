@@ -67,6 +67,7 @@ with pkgs;
   lsd
   lux
   mactop
+  mas
   mediainfo
   mediainfo-gui
   mermaid-cli

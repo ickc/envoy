@@ -4,8 +4,6 @@
 [
   # CLI for ImageOptim, ImageAlpha and JPEGmini
   "imageoptim-cli"
-  # Mac App Store command-line interface
-  "mas"
   # Media player based on MPlayer and mplayer2
   "mpv"
   # Swiss-army knife of markup format conversion
