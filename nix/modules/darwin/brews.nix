@@ -4,6 +4,4 @@
 [
   # CLI for ImageOptim, ImageAlpha and JPEGmini
   "imageoptim-cli"
-  # Swiss-army knife of markup format conversion
-  "pandoc"
 ]
