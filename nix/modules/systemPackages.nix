@@ -13,9 +13,9 @@ with pkgs;
   bat-extras.batpipe
   bat-extras.batwatch
   bat-extras.prettybat
-  bottom
+  # bottom
   btop
-  code2prompt
+  # code2prompt
   coreutils-full
   delta
   devbox
