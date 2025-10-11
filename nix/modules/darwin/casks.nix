@@ -80,6 +80,8 @@
   "imageoptim"
   # Vector graphics editor
   "inkscape"
+  # Jellyfin desktop client
+  "jellyfin-media-player"
   # Menu bar manager
   "jordanbaird-ice"
   # Desktop application for JupyterLab
