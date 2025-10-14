@@ -106,8 +106,6 @@
   "obsidian"
   # Environment for statistical computing and graphics
   "r-app"
-  # All-in-one bookmark manager
-  "raindropio"
   # Move and resize windows using keyboard shortcuts or snap areas
   "rectangle"
   # Data science software focusing on R and Python
