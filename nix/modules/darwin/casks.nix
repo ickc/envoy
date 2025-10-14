@@ -23,8 +23,6 @@
   "displaylink"
   # Client for the Dropbox cloud storage service
   "dropbox"
-  # Finds duplicate files in a computer system
-  "dupeguru"
   # Web browser
   "firefox"
   "font-andika"
