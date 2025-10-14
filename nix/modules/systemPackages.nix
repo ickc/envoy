@@ -6,6 +6,7 @@
 with pkgs;
 [
   pkgs-unstable.gemini-cli
+  pkgs-unstable.github-copilot-cli
   pkgs-unstable.llama-cpp
   pkgs-unstable.macmon
   pkgs-unstable.pandoc
