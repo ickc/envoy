@@ -84,8 +84,6 @@
   "jellyfin-media-player"
   # Menu bar manager
   "jordanbaird-ice"
-  # Desktop application for JupyterLab
-  "jupyterlab-app"
   # ZSA keyboard firmware flasher
   "keymapp"
   # App providing offline access to Wikipedia and many other web sites
