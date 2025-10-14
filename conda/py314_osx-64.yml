@@ -23,7 +23,6 @@ dependencies:
 - colorama
 - coloredlogs
 - compilers
-- contextily
 - coverage
 - custom-inherit
 - dautilpy
@@ -36,7 +35,6 @@ dependencies:
 - fire
 - folium
 - geojson
-- geopandas
 - geopy
 - ghapi
 - glom
@@ -94,7 +92,6 @@ dependencies:
 - pyotp
 - pyreadstat
 - pyrss2gen
-- pysm3
 - pytables
 - pytest
 - pytest-cov
