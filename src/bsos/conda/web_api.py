@@ -20,7 +20,7 @@ import yamlloader  # type: ignore
 CACHE_DIR: Path = Path(platformdirs.user_cache_dir(appname="bsos", ensure_exists=True))
 
 
-def parse_conda_build(build: str, regex=re.compile(r"py(\d)(\d+)h")) -> tuple[int, int]:
+def parse_conda_build(build: str, regex=re.compile(r"py(\d)(\d+)")) -> tuple[int, int]:
     """Parse conda build string and return python version as tuple.
 
     This does not attempt to be robust, just quick and dirty getting the job done here.
