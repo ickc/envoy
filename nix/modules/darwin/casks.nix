@@ -15,6 +15,8 @@
   "calibre"
   # OpenAI's official ChatGPT desktop app
   "chatgpt"
+  # OpenAI's official browser with ChatGPT built in
+  "chatgpt-atlas"
   # Anthropic's official Claude AI desktop app
   "claude"
   # Time tracking tool for agencies and freelancers
