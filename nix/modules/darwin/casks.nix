@@ -90,6 +90,8 @@
   "kiwix"
   # Free cross-platform office suite, fresh version
   "libreoffice"
+  # Discover, download, and run local LLMs
+  "lm-studio"
   # Bible study software
   "logos"
   # Full TeX Live distribution with GUI applications
