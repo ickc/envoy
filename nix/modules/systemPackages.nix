@@ -5,6 +5,8 @@
 { pkgs, pkgs-unstable }:
 with pkgs;
 [
+  pkgs-unstable.claude-code
+  pkgs-unstable.codex
   pkgs-unstable.gemini-cli
   pkgs-unstable.github-copilot-cli
   pkgs-unstable.llama-cpp
