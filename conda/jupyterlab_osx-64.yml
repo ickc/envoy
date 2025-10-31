@@ -6,9 +6,13 @@ dependencies:
 - bash_kernel
 - ipympl
 - ipywidgets
+- jedi-language-server
+- jupyter-lsp
+- jupyter-lsp-python
 - jupyter_bokeh
 - jupyterlab
 - jupyterlab-geojson
+- jupyterlab-lsp
 - jupyterlab-myst
 - jupytext
 - nbconvert
@@ -18,5 +22,6 @@ dependencies:
 - playwright
 - plotly
 - pyqtwebengine
+- python-lsp-server
 - pyviz_comms
 name: jupyterlab
