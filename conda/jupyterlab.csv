@@ -3,9 +3,12 @@ anywidget,,False,,0.9.18,,,"simple, custom Jupyter widgets",,True,False,False,Fa
 bash_kernel,,False,,0.10.0,,,A Jupyter kernel for bash,https://github.com/takluyver/bash_kernel,True,True,False,False,True,True,False,False,False
 ipympl,,False,,0.9.7,,,Matplotlib Jupyter Extension,,True,True,False,False,True,True,False,True,True
 ipywidgets,,False,,8.1.7,,,Jupyter Interactive Widgets,https://ipywidgets.readthedocs.io/en/latest/,True,True,False,False,True,True,False,True,True
+jupyter-lsp,,False,,2.3.0,,,Multi-Language Server WebSocket proxy for Jupyter Server,https://jupyterlab-lsp.readthedocs.io,True,False,False,False,True,False,False,False,False
+jupyter-lsp-python,,False,,2.3.0,,,A metapackage for jupyter-lsp and python-lsp-server,https://jupyterlab-lsp.readthedocs.io,True,False,False,False,True,False,False,False,False
 jupyter_bokeh,,False,,4.0.5,,,A Jupyter extension for rendering Bokeh content.,,True,False,False,False,True,False,False,False,False
 jupyterlab,,False,,4.4.9,,,"An extensible environment for interactive and reproducible computing, based on the Jupyter Notebook and Architecture.",https://jupyterlab.readthedocs.io,True,True,False,False,True,True,False,True,True
 jupyterlab-geojson,,False,,3.4.0,,,GeoJSON renderer for JupyterLab,,True,False,False,False,True,False,False,False,False
+jupyterlab-lsp,,False,,5.2.0,,,Language Server Protocol integration for JupyterLab,https://jupyterlab-lsp.readthedocs.io,True,False,False,False,True,False,False,False,False
 jupyterlab-myst,,False,,2.4.2,,,A Myst renderer for JupyterLab,,True,False,False,False,True,False,False,False,False
 jupytext,,False,,master,,,"Jupyter notebooks as Markdown documents, Julia, Python or R scripts",https://github.com/mwouts/jupytext/blob/master/README.md,False,False,False,False,True,False,False,False,False
 nbconvert,,False,,7.16.6,,,Converting Jupyter Notebooks,https://nbconvert.readthedocs.org/,True,True,True,True,True,True,True,True,True
