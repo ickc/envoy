@@ -3,6 +3,7 @@ anywidget,,False,,0.9.18,,,"simple, custom Jupyter widgets",,True,False,False,Fa
 bash_kernel,,False,,0.10.0,,,A Jupyter kernel for bash,https://github.com/takluyver/bash_kernel,True,True,False,False,True,True,False,False,False
 ipympl,,False,,0.9.7,,,Matplotlib Jupyter Extension,,True,True,False,False,True,True,False,True,True
 ipywidgets,,False,,8.1.7,,,Jupyter Interactive Widgets,https://ipywidgets.readthedocs.io/en/latest/,True,True,False,False,True,True,False,True,True
+jedi-language-server,,False,,0.46.0,,,A language server for Jedi!,,True,False,False,False,True,False,False,False,False
 jupyter-lsp,,False,,2.3.0,,,Multi-Language Server WebSocket proxy for Jupyter Server,https://jupyterlab-lsp.readthedocs.io,True,False,False,False,True,False,False,False,False
 jupyter-lsp-python,,False,,2.3.0,,,A metapackage for jupyter-lsp and python-lsp-server,https://jupyterlab-lsp.readthedocs.io,True,False,False,False,True,False,False,False,False
 jupyter_bokeh,,False,,4.0.5,,,A Jupyter extension for rendering Bokeh content.,,True,False,False,False,True,False,False,False,False
@@ -18,4 +19,5 @@ pixi-kernel,,False,,0.6.7,,,Jupyter kernels using Pixi for reproducible notebook
 playwright,,False,,1.55.1,,,"Playwright is a framework for Web Testing and Automation. It allows testing Chromium, Firefox and WebKit with a single API.",https://playwright.dev/docs/,False,True,True,False,False,True,True,False,True
 plotly,,False,,6.3.1,,,"An interactive, browser-based graphing library for Python",https://plot.ly/python/,True,True,False,False,True,True,False,True,True
 pyqtwebengine,,False,,5.15.11,,,Python bindings for the Qt cross platform application toolkit,https://www.riverbankcomputing.com/static/Docs/PyQt5/,True,True,True,False,False,True,True,False,True
+python-lsp-server,,False,,1.13.1,,,An implementation of the Language Server Protocol for Python,,True,False,False,False,True,False,False,False,False
 pyviz_comms,,False,,3.0.6,,,Bidirectional communication for PyViz,,True,False,False,False,True,False,False,False,False
