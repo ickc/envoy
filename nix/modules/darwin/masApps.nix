@@ -34,11 +34,13 @@
   "Spark" = 1176895641;
   "Speedtest" = 1153157709;
   "Strongbox" = 897283731;
+  "Surfshark" = 1437809329;
   "Tabs to Links" = 1451408472;
   "Tailscale" = 1475387142;
   "TaskPaper" = 1090940630;
   "The Camelizer" = 1532579087;
   "The Unarchiver" = 425424353;
+  "Toggl Track" = 1291898086;
   "uBlacklist for Safari" = 1547912640;
   "URL Linker" = 1289119450;
   "Vinegar" = 1591303229;
