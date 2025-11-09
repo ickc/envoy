@@ -203,6 +203,7 @@ tco,,True,,1.2.1,,,Tail Call Optimization for Python,,True,False,False,False,Fal
 terminaltables,,True,,3.1.10,,,Generate simple tables in terminals from a nested list of strings.,https://robpol86.github.io/terminaltables,True,False,False,False,False,True,False,False,False,False,False
 tikzplotlib,,False,,0.10.1,,,Convert matplotlib figures into TikZ/PGFPlots,,True,False,False,False,False,True,False,False,False,False,False
 toast,,True,,2.3.14,,,Time Ordered Astrophysics Scalable Tools,,True,True,False,False,False,False,True,False,False,False,False
+tokenize-rt,,False,,6.2.0,black,,A wrapper around the stdlib `tokenize` which roundtrips.,,True,True,False,False,False,True,True,False,False,True,False
 toml,,False,,0.10.2,,,Python lib for TOML.,,True,True,False,False,False,True,False,False,True,True,False
 tox,,True,,4.32.0,,,virtualenv-based automation of test activities,https://tox.readthedocs.org/,True,True,True,False,True,True,True,True,True,True,False
 tox-conda,,True,,0.10.2,,,tox plugin that provides integration with conda,https://github.com/tox-dev/tox-conda,True,False,False,False,False,True,False,False,False,False,False
@@ -213,6 +214,7 @@ tzwhere,,False,,3.0.3,,,Python library to look up timezone from lat / long offli
 ujson,,True,,5.11.0,,,Ultra fast JSON decoder and encoder written in C with Python bindings,,True,True,True,False,True,False,True,True,True,True,False
 uncertainties,,False,,3.2.3,,,"Transparent calculations with uncertainties on the quantities involved (aka ""error propagation""); fast calculation of derivatives.",,True,True,False,False,False,True,True,False,True,True,False
 urlpath,,False,,1.2.0,,,Object-oriented URL from `urllib.parse` and `pathlib`,,True,False,False,False,False,True,False,False,False,False,False
+uvloop,,False,,0.22.1,black,,Ultra fast implementation of asyncio event loop on top of libuv.,http://uvloop.readthedocs.org,True,True,True,False,True,False,True,True,False,False,False
 watchdog,,False,,6.0.0,,,Filesystem events monitoring,http://pythonhosted.org/watchdog,True,True,True,False,True,True,True,True,True,True,False
 wheel,,False,,0.45.1,,,A built-package format for Python.,,True,True,True,False,True,True,True,False,True,True,False
 wolframclient,,False,,1.1.7,,,A Python library with various tools to interact with the Wolfram Language and the Wolfram Cloud.,https://wolfr.am/wolframclientdoc,True,False,False,False,False,True,False,False,False,False,False
