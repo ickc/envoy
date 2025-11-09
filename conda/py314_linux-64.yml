@@ -67,6 +67,7 @@ dependencies:
 - nbconvert
 - nbsphinx
 - networkx
+- numba
 - numexpr
 - numpy
 - odfpy
@@ -126,12 +127,14 @@ dependencies:
 - tabulate
 - tbb
 - tikzplotlib
+- tokenize-rt
 - toml
 - typeguard
 - types-pyyaml
 - tzwhere
 - uncertainties
 - urlpath
+- uvloop
 - watchdog
 - wheel
 - wolframclient

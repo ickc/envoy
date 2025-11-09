@@ -125,12 +125,14 @@ dependencies:
 - tabulate
 - tbb
 - tikzplotlib
+- tokenize-rt
 - toml
 - typeguard
 - types-pyyaml
 - tzwhere
 - uncertainties
 - urlpath
+- uvloop
 - watchdog
 - wheel
 - wolframclient

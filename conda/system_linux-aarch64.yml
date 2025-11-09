@@ -52,6 +52,7 @@ dependencies:
 - pandoc
 - parallel
 - patch
+- pdf2svg
 - pixi
 - poppler
 - prettier
