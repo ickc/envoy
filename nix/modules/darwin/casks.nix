@@ -3,6 +3,8 @@
   "adobe-creative-cloud"
   # Automatic tiling window manager similar to xmonad
   "amethyst"
+  # AI Coding Agent IDE
+  "antigravity"
   # Application uninstaller
   "appcleaner"
   # Multi-track audio editor and recorder
