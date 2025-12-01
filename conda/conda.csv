@@ -62,7 +62,7 @@ geojson,,False,,3.2.0,,,Python bindings and utilities for GeoJSON,,True,True,Fal
 geopandas,,True,,1.1.1,,,Geographic pandas extensions,,True,True,False,False,False,True,True,False,True,True,False
 geopy,,False,,2.4.1,,,Python Geocoding Toolbox.,,True,True,False,False,False,True,True,False,True,True,False
 ghapi,,False,,1.0.8,,,A python client for the GitHub API,,True,False,False,False,False,True,False,False,False,False,False
-ghp-import,,True,,2.1.0,,,Copy your docs directly to the gh-pages branch.,,True,True,False,False,False,True,True,False,True,True,False
+ghp-import,,False,,2.1.0,,,Copy your docs directly to the gh-pages branch.,,True,True,False,False,False,True,True,False,True,True,False
 github3.py,,True,,4.0.1,,,Python wrapper for the GitHub API (http://developer.github.com/v3).,,True,True,False,False,False,True,True,False,True,True,False
 glom,,False,,24.11.0,,,"A declarative object transformer and formatter, for conglomerating nested data.",,True,False,False,False,False,True,False,False,False,False,False
 gooey,,True,,1.0.8.1,,,Turn (almost) any command line program into a full GUI application with one line,https://github.com/chriskiehl/Gooey,True,True,False,False,False,False,True,False,False,True,False
