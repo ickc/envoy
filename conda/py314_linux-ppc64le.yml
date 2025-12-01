@@ -36,6 +36,7 @@ dependencies:
 - geojson
 - geopy
 - ghapi
+- ghp-import
 - glom
 - graphviz
 - h5py
