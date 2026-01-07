@@ -80,6 +80,8 @@
   "google-drive"
   # Graphically shows disk usage within a file system
   "grandperspective"
+  # Free and open-source media player
+  "iina"
   # Utility to reduce the size of 24-bit PNG files
   "imagealpha"
   # Tool to optimise images to a smaller size

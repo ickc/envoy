@@ -72,7 +72,6 @@ with pkgs;
   mermaid-cli
   minify
   mosh
-  mpv
   nano
   nixd
   nixfmt-rfc-style
