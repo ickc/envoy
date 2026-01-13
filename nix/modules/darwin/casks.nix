@@ -1,4 +1,6 @@
 [
+  # Scientific and technical publishing system built on Pandoc
+  "Quarto"
   # Collection of apps and services for photography, design, video, web, and UX
   "adobe-creative-cloud"
   # Automatic tiling window manager similar to xmonad
