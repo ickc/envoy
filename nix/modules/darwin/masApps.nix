@@ -2,6 +2,7 @@
   "1Blocker" = 1365531024;
   "Amphetamine" = 937984704;
   "Blackmagic Disk Speed Test" = 425264550;
+  "Canary Mail" = 1236045954;
   "Compressor" = 424390742;
   "Drafts" = 1435957248;
   "EasyRes" = 688211836;
