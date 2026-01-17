@@ -21,7 +21,7 @@ def mas_list(
 
 def format_mas_to_nix(apps: list[tuple[str, str, str]]) -> list[str]:
     """Format the list of mas apps to a list of strings that can be written to a flake.nix file."""
-    res = [f'  "{app[1]}" = {app[0]};\n' for app in apps]
+    res = [f'  "{app[1]}" = {app[0].strip()};\n' for app in apps]
     res.sort(key=str.lower)
     return res
 
