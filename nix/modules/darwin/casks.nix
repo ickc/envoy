@@ -25,8 +25,6 @@
   "claude"
   # Terminal-based AI coding assistant
   "claude-code"
-  # Time tracking tool for agencies and freelancers
-  "clockify"
   # OpenAI's coding agent that runs in your terminal
   "codex"
   # Drivers for DisplayLink docks, adapters and monitors
