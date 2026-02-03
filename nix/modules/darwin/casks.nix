@@ -27,6 +27,8 @@
   "claude-code"
   # OpenAI's coding agent that runs in your terminal
   "codex"
+  # OpenAI's Codex desktop app for managing coding agents
+  "codex-app"
   # Drivers for DisplayLink docks, adapters and monitors
   "displaylink"
   # Client for the Dropbox cloud storage service
