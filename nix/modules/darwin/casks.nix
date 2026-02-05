@@ -84,10 +84,6 @@
   "grandperspective"
   # Free and open-source media player
   "iina"
-  # Utility to reduce the size of 24-bit PNG files
-  "imagealpha"
-  # Tool to optimise images to a smaller size
-  "imageoptim"
   # Vector graphics editor
   "inkscape"
   # Jellyfin desktop client
