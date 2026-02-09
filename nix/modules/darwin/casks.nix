@@ -107,6 +107,8 @@
   "microsoft-teams"
   # Open-source music notation software
   "musescore"
+  # Music tagger
+  "musicbrainz-picard"
   # Rename a list of files quickly
   "namechanger"
   # App to write, plan, collaborate, and get organised
