@@ -56,6 +56,7 @@
   "font-latin-modern-math"
   "font-noto-sans-cjk"
   "font-noto-serif-cjk"
+  "font-outfit"
   "font-scheherazade"
   "font-source-code-pro"
   "font-source-sans-3"
