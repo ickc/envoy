@@ -93,7 +93,6 @@ dependencies:
 - pylint
 - pymediainfo
 - pymysql
-- rapidsai::pynvjitlink
 - pyotp
 - pyreadstat
 - pyrss2gen

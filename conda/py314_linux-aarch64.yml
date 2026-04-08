@@ -87,7 +87,6 @@ dependencies:
 - pygments
 - pylint
 - pymysql
-- rapidsai::pynvjitlink
 - pyotp
 - pyreadstat
 - pyrss2gen
