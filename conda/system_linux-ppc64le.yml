@@ -38,6 +38,7 @@ dependencies:
 - inetutils
 - joshuto
 - jq
+- less
 - libarchive
 - lsdeluxe
 - make
@@ -61,6 +62,7 @@ dependencies:
 - tree
 - unzip
 - uv
+- watch
 - wget
 - which
 - zsh

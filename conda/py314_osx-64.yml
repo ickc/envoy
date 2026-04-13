@@ -25,6 +25,7 @@ dependencies:
 - compilers
 - coverage
 - custom-inherit
+- cvxopt
 - dautilpy
 - defopt
 - emcee

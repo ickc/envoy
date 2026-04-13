@@ -25,6 +25,7 @@ dependencies:
 - compilers
 - coverage
 - custom-inherit
+- cvxopt
 - dautilpy
 - defopt
 - emcee
@@ -86,6 +87,7 @@ dependencies:
 - pyarrow
 - pydot
 - pygments
+- pygraphviz
 - pylint
 - pymysql
 - pyotp

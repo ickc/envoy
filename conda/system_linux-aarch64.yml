@@ -40,6 +40,7 @@ dependencies:
 - joshuto
 - jq
 - juliaup
+- less
 - libarchive
 - lsdeluxe
 - make
@@ -67,6 +68,7 @@ dependencies:
 - tree
 - unzip
 - uv
+- watch
 - wget
 - which
 - zellij
