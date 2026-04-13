@@ -34,6 +34,7 @@ dependencies:
 - feedgen
 - fire
 - folium
+- gdb
 - geojson
 - geopy
 - ghapi
@@ -124,6 +125,7 @@ dependencies:
 - sympy
 - tabulate
 - tbb
+- tbb-devel
 - tikzplotlib
 - tokenize-rt
 - toml

@@ -24,6 +24,7 @@ dependencies:
 - coloredlogs
 - compilers
 - coverage
+- rapidsai::cubinlinker
 - custom-inherit
 - cvxopt
 - dautilpy
@@ -35,6 +36,7 @@ dependencies:
 - feedgen
 - fire
 - folium
+- gdb
 - geojson
 - geopy
 - ghapi
@@ -85,6 +87,7 @@ dependencies:
 - poetry
 - psutil
 - psycopg2
+- ptxcompiler
 - py-cpuinfo
 - pyarrow
 - pydot
@@ -127,6 +130,7 @@ dependencies:
 - sympy
 - tabulate
 - tbb
+- tbb-devel
 - tikzplotlib
 - tokenize-rt
 - toml
