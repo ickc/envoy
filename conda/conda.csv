@@ -35,6 +35,7 @@ conda-smithy,,True,,3.53.3,,,The tool for managing conda-forge feedstocks,,True,
 contextily,,True,,1.7.0,,,Context geo-tiles in Python,,True,True,False,False,False,True,True,False,True,True,False
 cookiecutter,,True,,2.6.0,,,"A command-line utility that creates projects from project templates, e.g. creating a Python package project from a Python package project template.",https://cookiecutter.readthedocs.io,True,True,False,False,False,True,True,False,True,True,False
 coverage,,False,,7.12.0,,,Code coverage measurement for Python,,True,True,True,False,True,True,True,True,True,True,False
+cubinlinker,rapidsai,False,,0.3.0,numba,,CUDA Binary Linker to support Minor Version Compatibility,,True,True,True,False,False,False,False,False,False,False,False
 cuda-python,,True,,13.0.3,numba,,CUDA Python,https://nvidia.github.io/cuda-python/,True,True,True,False,True,True,False,False,False,True,False
 custom-inherit,,False,,2.4.1,,,A Python package that provides customized docstring inheritance schemes between derived classes and their parents.,https://github.com/rsokl/custom_inherit/blob/master/README.md,True,False,False,False,False,True,False,False,False,False,False
 cvxopt,,False,,1.3.2,statsmodels,,Convex optimization package,https://cvxopt.org/userguide,True,True,True,False,True,False,True,True,False,True,False
@@ -58,6 +59,7 @@ flake8,,True,,7.3.0,,,Your Tool For Style Guide Enforcement,http://flake8.pycqa.
 flake8-pyi,,True,,25.5.0,,,A plugin for flake8 to enable linting .pyi files.,,True,True,True,False,True,True,True,True,False,True,False
 flatten-dict,,True,,0.4.2,,,A flexible utility for flattening and unflattening dict-like objects in Python.,,True,False,False,False,False,True,False,False,False,False,False
 folium,,False,,0.20.0,,,Make beautiful maps with Leaflet.js and Python,,True,True,False,False,False,True,True,False,True,True,False
+gdb,,False,,17.1,numba,,"GDB, the GNU Project debugger, allows you to see what is going on inside another program while it executes -- or what another program was doing at the moment it crashed.",https://sourceware.org/gdb/current/onlinedocs/gdb/,True,True,True,False,True,False,True,True,False,False,False
 geojson,,False,,3.2.0,,,Python bindings and utilities for GeoJSON,,True,True,False,False,False,True,True,False,True,True,False
 geopandas,,True,,1.1.1,,,Geographic pandas extensions,,True,True,False,False,False,True,True,False,True,True,False
 geopy,,False,,2.4.1,,,Python Geocoding Toolbox.,,True,True,False,False,False,True,True,False,True,True,False
@@ -139,6 +141,7 @@ pockets,,True,,0.9.1,,,A collection of helpful Python tools!,,True,False,False,F
 poetry,,False,,2.2.1,,,Python dependency management and packaging made easy,https://python-poetry.org/docs/,True,True,True,False,True,True,True,True,False,True,False
 psutil,,False,,7.1.3,bokeh,,A cross-platform process and system utilities module for Python,https://psutil.readthedocs.io/,True,True,True,False,True,False,True,True,True,True,False
 psycopg2,,False,,2.9.10,pandas,,PostgreSQL database adapter for Python,http://initd.org/psycopg/docs/,True,True,True,False,True,False,True,True,True,True,False
+ptxcompiler,,False,,0.8.1,numba,,PTX Static compiler and Numba patch,,True,True,True,False,True,False,False,False,False,False,False
 py-cpuinfo,,False,,9.0.0,,,A module for getting CPU info with pure Python,,True,True,False,False,False,True,True,False,True,True,False
 pyarrow,,False,,22.0.0,pandas/astropy,,Python libraries for Apache Arrow with default capabilities,,True,True,True,False,True,False,True,True,False,True,False
 pycodestyle,,True,,2.14.0,,,Python style guide checker,https://pycodestyle.readthedocs.io/,True,True,False,False,False,True,True,False,True,True,False
@@ -198,6 +201,7 @@ statsmodels,,False,,0.14.5,seaborn,https://www.statsmodels.org/stable/install.ht
 sympy,,False,,1.14.0,,https://docs.sympy.org/latest/install.html#mpmath,Python library for symbolic mathematics,https://docs.sympy.org/latest/index.html,True,True,True,False,True,True,True,True,True,True,False
 tabulate,,False,,0.9.0,pandas,,"Pretty-print tabular data in Python, a library and a command-line utility.",,True,True,False,False,False,True,True,False,True,True,False
 tbb,,False,,2022.3.0,numba,,TBB Libraries,https://software.intel.com/en-us/oneapi-tbb-documentation,False,True,True,False,True,False,True,True,True,True,False
+tbb-devel,,False,,2022.3.0,numba,,TBB Development files,https://software.intel.com/en-us/node/506039,False,True,True,False,True,False,True,True,False,True,False
 tco,,True,,1.2.1,,,Tail Call Optimization for Python,,True,False,False,False,False,True,False,False,False,False,False
 terminaltables,,True,,3.1.10,,,Generate simple tables in terminals from a nested list of strings.,https://robpol86.github.io/terminaltables,True,False,False,False,False,True,False,False,False,False,False
 tikzplotlib,,False,,0.10.1,,,Convert matplotlib figures into TikZ/PGFPlots,,True,False,False,False,False,True,False,False,False,False,False
