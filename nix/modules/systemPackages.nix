@@ -78,7 +78,7 @@ with pkgs;
   nmap
   onefetch
   # openai-whisper
-  openai-whisper-cpp
+  whisper-cpp
   opencc
   pam-reattach
   parallel

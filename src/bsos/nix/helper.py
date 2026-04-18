@@ -36,7 +36,6 @@ def get_package_install_name(name: str) -> str:
         "pandoc-cli": "pandoc",
         "patch": "gnupatch",
         "prettybat": "bat-extras.prettybat",
-        "whisper-cpp": "openai-whisper-cpp",
     }.get(name, name)
 
 
