@@ -25,7 +25,7 @@ with pkgs;
   # diffoscope
   difftastic
   diffutils
-  direnv
+  pkgs-unstable.direnv
   dua
   duti
   entr
