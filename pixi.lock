@@ -5,6 +5,8 @@ environments:
     - url: https://conda.anaconda.org/conda-forge/
     indexes:
     - https://pypi.org/simple
+    options:
+      pypi-prerelease-mode: if-necessary-or-explicit
     packages:
       linux-64:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
@@ -371,7 +373,7 @@ packages:
 - pypi: ./
   name: bsos
   version: 0.1.0
-  sha256: a2c9d7cc985e24d0bb50bbb9eac25473e5e12c932f3f7f9116a2ee78c281bc28
+  sha256: f49b651350677e0f07a900310fce42d12a3f9ca77ccf187c1e2e91957d1585dd
   requires_dist:
   - coloredlogs>=14,<16 ; extra == 'extras'
   - defopt>=6,<7
@@ -381,7 +383,6 @@ packages:
   - pyyaml
   - yamlloader
   requires_python: '>=3.8'
-  editable: true
 - conda: https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-h4bc722e_7.conda
   sha256: 5ced96500d945fb286c9c838e54fa759aa04a7129c59800f0846b4335cee770d
   md5: 62ee74e96c5ebb0af99386de58cf9553
