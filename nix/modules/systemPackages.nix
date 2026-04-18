@@ -83,7 +83,7 @@ with pkgs;
   pam-reattach
   parallel
   pdf2svg
-  poppler_utils
+  poppler-utils
   potrace
   procps
   ripgrep
