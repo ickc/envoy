@@ -133,28 +133,32 @@ yamlloader = ">=1.5.1,<2"
 bsos = { path = ".", editable = true}
 
 [tool.pixi.tasks]
-# generate
+# conda
+## generate
 conda-generate = { depends-on = [{ task = "conda-generate-conda" }, { task = "conda-generate-jupyterlab" }, { task = "conda-generate-system" }], description = "Generate conda environment files." }
 conda-generate-conda = { cmd = "python -m bsos.conda.web_api generate conda/conda.csv", description = "Generate conda/conda.csv" }
 conda-generate-jupyterlab = { cmd = "python -m bsos.conda.web_api generate conda/jupyterlab.csv -v 3.14 --name-format jupyterlab", description = "Generate conda/jupyterlab.csv" }
 conda-generate-system = { cmd = "python -m bsos.conda.web_api generate conda/system.csv -v 3.14 --name-format system --no-python", description = "Generate conda/system.csv" }
 
-# clean
+## clean
 conda-clean = { cmd = "python -m bsos.conda.web_api clean", description = "Remove the bsos cache when using conda.web_api." }
 conda-update = { depends-on = [{ task = "conda-clean"}, { task = "conda-generate" }], description = "Update conda environment files by cleaning the cache and regenerating them." }
 
-# misc
+## misc
 conda-list-depended = { cmd = "tail -n +2 conda/conda.csv | cut -d, -f6 | tr '/' '\n' | sort -u", description = "List all depended packages in conda/conda.csv" }
 
+# nix
+## update
+nix-update-config = { cmd = "nix flake update", cwd = "nix", description = "Update nix flake inputs." }
+nix-update-all = { cmd = "sudo darwin-rebuild switch --flake .", cwd = "nix", description = "Update all nix modules by rebuilding." }
+
+## helpers
 nix-mas-update = { cmd = "python -m bsos.nix.mas nix/modules/darwin/masApps.nix", description = "List all installed apps from the Mac App Store in nix flake format." }
-
 nix-command2package = { cmd = "python -m bsos.nix.helper command2package nix/command2package.csv", description = "Write the command to package mapping to a file." }
-
 nix-package2command = { cmd = "python -m bsos.nix.helper package2command nix/package2command.yml --flake-path nix/modules/systemPackages.nix", description = "Write the package to command mapping to a file." }
-
 nix-check-package-supported = { cmd = "python -m bsos.nix.helper check-package-supported nix/modules/systemPackages.nix", description = "Check if all packages in the package to command mapping are supported." }
-
 nix-format = { cmd = "find nix -name '*.nix' -exec nixfmt '{}' +", description = "Format all nix files in the project" }
 
+# brew
 brew-add-description = { cmd = "python -m bsos.brew.helper add-description nix/modules/darwin/brews.nix --sort", description = "Annotate a brews.nix file with brew descriptions." }
 brew-cask-add-description = { cmd = "python -m bsos.brew.helper add-description nix/modules/darwin/casks.nix --sort --cask", description = "Annotate a casks.nix file with brew descriptions." }
